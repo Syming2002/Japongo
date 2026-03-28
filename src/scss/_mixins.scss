@@ -1,0 +1,22 @@
+@use "../scss/variables" as *;
+
+@mixin navbar-button {
+    background-color: $sumo_iro;
+    width: 150px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    color: $white;
+    font-family: Yu Mincho;
+    font-size: 24px;
+}
+
+@mixin section {
+    background-color:  $sumo_iro;
+    font-family: Yu Mincho;
+    color: $white;
+    font-size: 30px;
+    border-radius: 10px;
+    width: 880px;
+    height: fit-content;
+}

@@ -1,0 +1,11 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
+
+button {
+    @include navbar-button();
+}
+
+button:hover {
+    background-color: $sumo_iro_light;
+    cursor: pointer;
+}

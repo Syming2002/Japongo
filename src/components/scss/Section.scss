@@ -1,0 +1,10 @@
+@use "../../scss/mixins" as *;
+
+section {
+    @include section();
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
