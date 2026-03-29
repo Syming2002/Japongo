@@ -37,7 +37,7 @@ interface KanaProviderProps {
 }
 
 export function KanaProvider({ children }: KanaProviderProps) {
-  const [kana, setKana] = useState(kanaUtils.KANA);
+  const [kana] = useState(kanaUtils.KANA);
 
   return (
     <KanaContext.Provider value={{ kana }}>{children}</KanaContext.Provider>
