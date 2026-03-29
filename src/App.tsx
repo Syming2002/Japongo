@@ -5,7 +5,7 @@ import KanaPage from "./pages/KanaPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/Japongo/"}>
       <KanaProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
