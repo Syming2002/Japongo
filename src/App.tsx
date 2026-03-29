@@ -1,10 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
+import { KanaProvider } from "./hooks/useKana";
+import KanaPage from "./pages/KanaPage";
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <BrowserRouter>
+      <KanaProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/kana" element={<KanaPage />} />
+        </Routes>
+      </KanaProvider>
+    </BrowserRouter>
   );
 }
 

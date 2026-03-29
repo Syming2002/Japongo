@@ -1,0 +1,17 @@
+@use "../../scss/variables" as *;
+
+.kana-row {
+    font-size: 125px;
+    border-radius: 10px;
+    border: 2px solid $sumo_iro;
+}
+
+td {
+    padding: 25px;
+}
+
+#kana-romaji-hr {
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    width: 75%;
+}

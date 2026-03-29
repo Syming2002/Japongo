@@ -8,7 +8,7 @@ interface FooterProps {
 function Footer({ version }: FooterProps) {
   return (
     <footer>
-      <hr />
+      <hr id="footer-hr" />
       <div id="footer-div">
         <FaGithub id="github-logo" />
         <p id="version-paragraph">Version: {version}</p>

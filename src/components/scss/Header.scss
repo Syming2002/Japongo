@@ -16,10 +16,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 100px;
 }
 
-hr {
+#header-hr {
     width: 880px;
     border: 1px solid $sumo_iro;
     justify-self: center;

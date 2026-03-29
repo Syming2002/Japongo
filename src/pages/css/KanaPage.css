@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+#hiragana-title {
+  text-align: center;
+  padding: 25px;
+  font-size: 42px;
+}
+
+#kana-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 25px;
+}
+
+tr {
+  display: flex;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+  padding-bottom: 45px;
+}
+
+#kana-page-hr {
+  width: 880px;
+  border: 1px solid #27221F;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+#katakana-title {
+  text-align: center;
+  padding: 25px;
+  font-size: 42px;
+}
