@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+section {
+  background-color: #27221F;
+  font-family: Yu Mincho;
+  color: #FFFFFF;
+  font-size: 30px;
+  border-radius: 10px;
+  width: 880px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}

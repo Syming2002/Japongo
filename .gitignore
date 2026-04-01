@@ -25,7 +25,3 @@ dist-ssr
 
 # assets
 src/assets
-
-# css folder and files
-src/components/css
-src/css

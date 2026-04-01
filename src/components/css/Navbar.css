@@ -1,0 +1,9 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 880px;
+  height: 120px;
+  gap: 50px;
+  margin-top: 100px;
+}
