@@ -1,7 +1,8 @@
 {
   "name": "japongo",
-  "homepage": "https://syming2002.github.io/Japongo/",
+  "homepage": "https://syming2002.github.io/japongo/",
   "version": "0.1.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
