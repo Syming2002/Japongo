@@ -8,7 +8,9 @@ function Navbar() {
       <NavLink to={"/kana"}>
         <Button title="Kana" />
       </NavLink>
-      <Button title="Kanji" />
+      <NavLink to={"/kanji"}>
+        <Button title="Kanji" />
+      </NavLink>
       <Button title="Grammaire" />
       <Button title="Verbes" />
       <Button title="Vocabulaire" />
