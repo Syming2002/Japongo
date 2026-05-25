@@ -1,0 +1,75 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
+
+@media (width > 768px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+}
+
+@media (width <= 768px) {
+  .sidebar-button {
+    @include sidebar-button();
+  }
+
+  .sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 60px #8a4d0f inset;
+    background-color: $japanese_white;
+    height: 100vh;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+    border: 1px solid $sumo_iro;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .sidebar-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 60px #8a4d0f inset;
+    background-color: $japanese_white;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(0%);
+    border: 1px solid $sumo_iro;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .button-div {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    height: 674px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .sidebar-footer-hr {
+    width: 75px;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+}

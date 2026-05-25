@@ -1,0 +1,9 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
+
+.grammar-selection-list-div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}

@@ -1,14 +1,16 @@
-import { HashRouter, Route, Routes } from "react-router";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import { KanaProvider } from "./hooks/useKana";
 import KanaPage from "./pages/KanaPage";
 import KanjiCategoryListPage from "./pages/KanjiCategoryListPage";
 import { KanjiProvider } from "./hooks/useKanji";
 import KanjiListPage from "./pages/KanjiListPage";
+import GrammarMainPage from "./pages/GrammarMainPage";
+import NoParticuleGrammarPage from "./pages/NoParticuleGrammarPage";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <KanaProvider>
         <KanjiProvider>
           <Routes>
@@ -35,10 +37,12 @@ function App() {
               path="/kanjiN1"
               element={<KanjiListPage level="jlpt-1" levelTitle="JLPT N1" />}
             />
+            <Route path="/grammar" element={<GrammarMainPage />} />
+            <Route path="/no-particle" element={<NoParticuleGrammarPage />} />
           </Routes>
         </KanjiProvider>
       </KanaProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

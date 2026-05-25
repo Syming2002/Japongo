@@ -2,26 +2,32 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-#footer-div {
-  display: flex;
-  justify-self: center;
-  align-items: center;
-  padding: 20px;
-  gap: 50px;
+@media (width > 768px) {
+  #footer-div {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+  }
+  .github-logo {
+    font-size: 30px;
+  }
+  .version-paragraph {
+    font-size: 18px;
+    text-align: center;
+  }
 }
-
-#footer-hr {
-  width: 880px;
-  border: 1px solid #27221F;
-  justify-self: center;
-  margin-top: 50px;
-}
-
-#github-logo {
-  font-size: 30px;
-}
-
-#version-paragraph {
-  font-size: 18px;
-  text-align: center;
+@media (width <= 768px) {
+  .main-footer {
+    display: none;
+  }
+  #footer-div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
 }

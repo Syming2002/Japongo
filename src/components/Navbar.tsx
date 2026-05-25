@@ -1,19 +1,41 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import Button from "./Button";
 import "./css/Navbar.css";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  function handleNavButtonClick(link: string) {
+    navigate(link);
+  }
+
   return (
     <nav>
-      <NavLink to={"/kana"}>
-        <Button title="Kana" />
-      </NavLink>
-      <NavLink to={"/kanji"}>
-        <Button title="Kanji" />
-      </NavLink>
-      <Button title="Grammaire" />
-      <Button title="Verbes" />
-      <Button title="Vocabulaire" />
+      <Button
+        title="Kana"
+        className="nav-button"
+        onClick={() => handleNavButtonClick("/kana")}
+      />
+      <Button
+        title="Kanji"
+        className="nav-button"
+        onClick={() => handleNavButtonClick("/kanji")}
+      />
+      <Button
+        title="Grammaire"
+        className="nav-button"
+        onClick={() => handleNavButtonClick("/grammar")}
+      />
+      <Button
+        title="Verbes"
+        className="nav-button"
+        onClick={() => handleNavButtonClick("/verbs")}
+      />
+      <Button
+        title="Vocabulaire"
+        className="nav-button"
+        onClick={() => handleNavButtonClick("/vocabulary")}
+      />
     </nav>
   );
 }

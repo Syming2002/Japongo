@@ -1,28 +1,39 @@
 @use "../../scss/variables" as *;
 
-header {
+/* Up to mobile responsive */
+@media (width > 768px) {
+  .main-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-#hr-div {
+  #hr-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
-#logo-nav-div {
+  #logo-nav-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-}
+  }
 
-#header-hr {
+  #header-hr {
     width: 880px;
     border: 1px solid $sumo_iro;
     justify-self: center;
     margin-top: 50px;
+  }
+}
+
+/* Down to mobile responsive */
+
+@media (width <= 768px) {
+  .main-header {
+    display: none;
+  }
 }

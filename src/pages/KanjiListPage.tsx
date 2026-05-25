@@ -50,7 +50,7 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
     <>
       <Header />
       <h1 id="kanji-title">Kanji du {levelTitle}</h1>
-      {loading && <h2 style={{ textAlign: "center" }}>Loading...</h2>}
+      {loading && <h2 style={{ textAlign: "center" }}>Chargement...</h2>}
 
       <table className="kanji-table">
         <tbody

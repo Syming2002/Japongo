@@ -1,0 +1,19 @@
+@use "../../scss/variables" as *;
+
+@media (width > 768px) {
+  .main-footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+  }
+
+  .main-hr-footer {
+    width: 880px;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+}

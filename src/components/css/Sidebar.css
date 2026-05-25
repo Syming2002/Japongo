@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+@media (width > 768px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+}
+@media (width <= 768px) {
+  .sidebar-button {
+    background-color: #27221F;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: Yu Mincho;
+    font-size: 15px;
+  }
+  .sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background-color: #EEE6D9;
+    height: 100vh;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+    border: 1px solid #27221F;
+    border-radius: 0 5px 5px 0;
+  }
+  .sidebar-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background-color: #EEE6D9;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(0%);
+    border: 1px solid #27221F;
+    border-radius: 0 5px 5px 0;
+  }
+  .button-div {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    height: 674px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .sidebar-footer-hr {
+    width: 75px;
+    border: 1px solid #27221F;
+    justify-self: center;
+    margin-top: 50px;
+  }
+}

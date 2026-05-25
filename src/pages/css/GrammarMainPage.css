@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+.grammar-selection-list-div {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}

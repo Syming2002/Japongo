@@ -8,7 +8,7 @@ interface KanjiCategoryProps {
 
 function KanjiCategory({ level, path }: KanjiCategoryProps) {
   return (
-    <Link to={`/${path}`}>
+    <Link className="kanji-category-link" to={`/${path}`}>
       <div className="kanji-category-div">
         <p className="level-text">{level}</p>
       </div>

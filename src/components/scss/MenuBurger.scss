@@ -1,0 +1,56 @@
+@use "../../scss/variables" as *;
+@use "../../scss/mixins" as *;
+
+.menu-burger-button {
+  @include menu-burger-button();
+  transition: transform 0.5s ease;
+  transform: translate(0%);
+}
+
+.menu-burger-button-active {
+  @include menu-burger-button();
+  transition: transform 0.5s ease;
+  transform: translate(600%);
+}
+
+.bar {
+  width: 100%;
+  background-color: $white;
+  height: 2px;
+}
+
+.bar-1 {
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.bar-1-active {
+  transition: transform 0.5s ease;
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.bar-2 {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.bar-2-active {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.bar-3 {
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.bar-3-active {
+  transition: transform 0.5s ease;
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+@media (width > 768px) {
+  .menu-burger-button {
+    display: none;
+  }
+}

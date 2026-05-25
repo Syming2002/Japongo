@@ -2,29 +2,35 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Up to mobile responsive */
+@media (width > 768px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hr-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #logo-nav-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  #header-hr {
+    width: 880px;
+    border: 1px solid #27221F;
+    justify-self: center;
+    margin-top: 50px;
+  }
 }
-
-#hr-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#logo-nav-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
-
-#header-hr {
-  width: 880px;
-  border: 1px solid #27221F;
-  justify-self: center;
-  margin-top: 50px;
+/* Down to mobile responsive */
+@media (width <= 768px) {
+  .main-header {
+    display: none;
+  }
 }
