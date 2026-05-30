@@ -3,14 +3,12 @@ import "./css/KanjiCard.css";
 interface KanjiCardProps {
   kanji: string;
   meaningEn: string;
-  borderStyle: string;
-  width: string;
 }
 
-function KanjiCard({ kanji, meaningEn, borderStyle, width }: KanjiCardProps) {
+function KanjiCard({ kanji, meaningEn }: KanjiCardProps) {
   return (
     <>
-      <td style={{ border: borderStyle, width: width }} className="kanji-row">
+      <td className="kanji-card">
         {kanji}
         <hr className="kanji-meaning-hr" />
         <p className="kanji-meaning">{meaningEn}</p>

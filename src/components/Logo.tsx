@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router";
 import "./css/Logo.css";
 
 function Logo() {
+  const navigate = useNavigate();
+
   return (
-    <div id="logo">
+    <button
+      style={{ background: "none", border: "none" }}
+      id="logo"
+      onClick={() => navigate("/")}
+    >
       <div id="upper-logo">
         <div id="dot"></div>
         <div id="vertical-bar"></div>
@@ -11,7 +18,7 @@ function Logo() {
         <div id="horizontal-bar"></div>
         <div id="buckle"></div>
       </div>
-    </div>
+    </button>
   );
 }
 

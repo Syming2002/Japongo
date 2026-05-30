@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import KanjiCategory from "../components/KanjiCategory";
+import Sidebar from "../components/Sidebar";
 
 import "./css/KanjiCategoryListPage.css";
 
@@ -23,6 +24,8 @@ function KanjiCategoryListPage() {
   return (
     <>
       <Header />
+      <Sidebar />
+      <h1 id="kanji-category-list-main-title">Liste des Kanji par JLPT</h1>
       <div id="kanji-category-list-div">
         <KanjiCategory level="JLPT N5" path="kanjiN5" />
         <KanjiCategory level="JLPT N4" path="kanjiN4" />
@@ -30,7 +33,11 @@ function KanjiCategoryListPage() {
         <KanjiCategory level="JLPT N2" path="kanjiN2" />
         <KanjiCategory level="JLPT N1" path="kanjiN1" />
       </div>
-      <Footer version={0.1} />
+      <Footer
+        version={0.1}
+        footerClassName="main-footer"
+        footerHrClassName="main-hr-footer"
+      />
     </>
   );
 }

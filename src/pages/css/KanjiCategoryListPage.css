@@ -1,6 +1,26 @@
-#kanji-category-list-div {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 50px;
+@media (width >= 1024px) {
+  #kanji-category-list-main-title {
+    text-align: center;
+  }
+  #kanji-category-list-div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+@media (width < 1024px) {
+  #kanji-category-list-main-title {
+    margin-top: 25px;
+    text-align: center;
+  }
+  #kanji-category-list-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    gap: 50px;
+  }
 }

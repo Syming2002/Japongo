@@ -1,0 +1,10 @@
+#no-particule-main-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+@media (width <= 768px) {
+  #no-particule-grammar-page-div {
+    height: 100vh;
+  }
+}

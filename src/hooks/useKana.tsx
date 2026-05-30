@@ -1,27 +1,14 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import * as kanaUtils from "../utils/kana";
 
-export interface IKana {
-  kana: {
-    id: number;
-    hiragana: string;
-    katakana: string;
-    romaji: string;
-  }[];
-}
+export type Kana = {
+  id: number;
+  hiragana: string;
+  katakana: string;
+  romaji: string;
+}[];
 
-const initialValues = {
-  kana: [
-    {
-      id: 1,
-      hiragana: "",
-      katakana: "",
-      romaji: "",
-    },
-  ],
-};
-
-export const KanaContext = createContext<IKana>(initialValues);
+export const KanaContext = createContext<Kana | undefined>(undefined);
 
 export const useKana = () => {
   const kanaContext = useContext(KanaContext);
@@ -37,9 +24,7 @@ interface KanaProviderProps {
 }
 
 export function KanaProvider({ children }: KanaProviderProps) {
-  const [kana] = useState(kanaUtils.KANA);
+  const kana = kanaUtils.KANA;
 
-  return (
-    <KanaContext.Provider value={{ kana }}>{children}</KanaContext.Provider>
-  );
+  return <KanaContext.Provider value={kana}>{children}</KanaContext.Provider>;
 }

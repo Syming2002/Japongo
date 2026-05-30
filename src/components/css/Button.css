@@ -2,17 +2,6 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-button {
-  background-color: #27221F;
-  width: 150px;
-  height: 60px;
-  padding: 10px;
-  border-radius: 10px;
-  color: #FFFFFF;
-  font-family: Yu Mincho;
-  font-size: 24px;
-}
-
 button:hover {
   background-color: #574c45;
   cursor: pointer;

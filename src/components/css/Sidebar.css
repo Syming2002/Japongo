@@ -8,8 +8,15 @@
   }
 }
 @media (width <= 768px) {
+  .sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .sidebar-button {
     background-color: #27221F;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100px;
     height: 40px;
     padding: 10px;

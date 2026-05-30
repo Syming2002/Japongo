@@ -3,26 +3,17 @@ import "./css/KanaCard.css";
 interface KanaCardProps {
   kana: string;
   romaji: string;
-  borderStyle: string;
-  width: string;
-  romajiFontSize: string;
 }
 
-function KanaCard({
-  kana,
-  romaji,
-  borderStyle,
-  width,
-  romajiFontSize,
-}: KanaCardProps) {
+function KanaCard({ kana, romaji }: KanaCardProps) {
   return (
     <>
-      <td style={{ border: borderStyle, width: width }} className="kana-row">
-        {kana}
+      <td
+        className={kana === " " ? "kana-card-table-empty" : "kana-card-table"}
+      >
+        <p className={kana === " " ? "" : "kana-text"}>{kana}</p>
         {kana !== " " && <hr id="kana-romaji-hr" />}
-        <p style={{ fontSize: romajiFontSize, textAlign: "center" }}>
-          {romaji}
-        </p>
+        <p className={kana === " " ? "" : "romaji-text"}>{romaji}</p>
       </td>
     </>
   );

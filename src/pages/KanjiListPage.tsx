@@ -5,6 +5,7 @@ import KanjiCard from "../components/KanjiCard";
 import type { Kanji } from "./KanjiCategoryListPage";
 
 import "./css/KanjiListPage.css";
+import Sidebar from "../components/Sidebar";
 
 interface KanjiListPageProps {
   level: string;
@@ -49,33 +50,29 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
   return (
     <>
       <Header />
+      <Sidebar />
       <h1 id="kanji-title">Kanji du {levelTitle}</h1>
       {loading && <h2 style={{ textAlign: "center" }}>Chargement...</h2>}
 
       <table className="kanji-table">
-        <tbody
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "45px",
-          }}
-        >
-          {kanji.map((kanji, index) => (
-            <tr key={index}>
+        <tbody>
+          <tr className="kanji-table-row">
+            {kanji.map((kanji, index) => (
               <KanjiCard
                 kanji={kanji.kanji}
                 key={index}
                 meaningEn={kanji.heisig_en}
-                borderStyle="1px solid $sumo_iro"
-                width="250px"
               />
-            </tr>
-          ))}
+            ))}
+          </tr>
         </tbody>
       </table>
 
-      <Footer version={0.1} />
+      <Footer
+        version={0.1}
+        footerClassName="main-footer"
+        footerHrClassName="main-hr-footer"
+      />
     </>
   );
 }

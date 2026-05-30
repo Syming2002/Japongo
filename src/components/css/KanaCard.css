@@ -2,18 +2,128 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-.kana-row {
-  font-size: 125px;
-  border-radius: 10px;
-  border: 2px solid #27221F;
+@media (width >= 1024px) {
+  .kana-card-table {
+    font-size: 56px;
+    border-radius: 10px;
+    border: 2px solid #27221F;
+    width: 178.2px;
+  }
+  .kana-card-table-empty {
+    width: 178.2px;
+    border-style: none;
+  }
+  #kana-romaji-hr {
+    border: 1px solid #27221F;
+    justify-self: center;
+    width: 75%;
+  }
 }
-
-td {
-  padding: 25px;
+@media (width > 768px) and (width <= 1024px) {
+  .kana-card-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 56px;
+    border-radius: 10px;
+    border: 2px solid #27221F;
+    width: 110px;
+    height: 200px;
+    gap: 15px;
+  }
+  .kana-card-table-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 110px;
+    height: 200px;
+    gap: 15px;
+    padding: 10px;
+    border-style: none;
+  }
+  .kana-text {
+    font-size: 25px;
+    text-align: center;
+  }
+  #kana-romaji-hr {
+    border: 1px solid #27221F;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .romaji-text {
+    font-size: 25px;
+    text-align: center;
+  }
 }
-
-#kana-romaji-hr {
-  border: 1px solid #27221F;
-  justify-self: center;
-  width: 75%;
+@media (width > 425px) and (width <= 768px) {
+  .kana-card-table {
+    font-size: 75px;
+    border-radius: 10px;
+    border: 2px solid #27221F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .kana-card-table-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    border-style: none;
+  }
+  .kana-text {
+    font-size: 25px;
+    text-align: center;
+  }
+  #kana-romaji-hr {
+    border: 1px solid #27221F;
+    margin: 0 auto;
+    width: 75%;
+  }
+  .romaji-text {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media (width < 426px) {
+  .kana-card-table {
+    font-size: 75px;
+    border-radius: 10px;
+    border: 2px solid #27221F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 110px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .kana-card-table-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 110px;
+    padding: 10px;
+    border-style: none;
+  }
+  .kana-text {
+    font-size: 25px;
+    text-align: center;
+  }
+  #kana-romaji-hr {
+    border: 1px solid #27221F;
+    margin: 0 auto;
+    width: 75%;
+  }
+  .romaji-text {
+    font-size: 25px;
+    text-align: center;
+  }
 }

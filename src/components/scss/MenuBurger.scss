@@ -14,7 +14,7 @@
 }
 
 .bar {
-  width: 100%;
+  width: 50%;
   background-color: $white;
   height: 2px;
 }
@@ -26,7 +26,7 @@
 
 .bar-1-active {
   transition: transform 0.5s ease;
-  transform: rotate(45deg) translate(8px, 8px);
+  transform: rotate(45deg) translate(10px, 10px);
 }
 
 .bar-2 {
@@ -46,7 +46,7 @@
 
 .bar-3-active {
   transition: transform 0.5s ease;
-  transform: rotate(-45deg) translate(10px, -10px);
+  transform: rotate(-45deg) translate(12px, -12px);
 }
 
 @media (width > 768px) {

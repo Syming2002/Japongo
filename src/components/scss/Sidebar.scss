@@ -8,6 +8,11 @@
 }
 
 @media (width <= 768px) {
+  .sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .sidebar-button {
     @include sidebar-button();
   }

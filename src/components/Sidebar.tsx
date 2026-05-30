@@ -37,7 +37,7 @@ function Sidebar() {
           <Button
             title="Grammaire"
             className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/garammar")}
+            onClick={() => handleSidebarButtonClick("/grammar")}
           />
           <Button
             title="Verbes"
