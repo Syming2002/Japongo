@@ -5,11 +5,7 @@ function Logo() {
   const navigate = useNavigate();
 
   return (
-    <button
-      style={{ background: "none", border: "none" }}
-      id="logo"
-      onClick={() => navigate("/")}
-    >
+    <div id="logo" onClick={() => navigate("/")}>
       <div id="upper-logo">
         <div id="dot"></div>
         <div id="vertical-bar"></div>
@@ -18,7 +14,7 @@ function Logo() {
         <div id="horizontal-bar"></div>
         <div id="buckle"></div>
       </div>
-    </button>
+    </div>
   );
 }
 

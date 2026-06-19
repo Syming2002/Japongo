@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import KanaCard from "../components/KanaCard";
 import KanaTableRow from "../components/KanaTableRow";
 import Sidebar from "../components/Sidebar";
 import { useKana } from "../hooks/useKana";

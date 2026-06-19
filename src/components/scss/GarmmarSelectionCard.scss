@@ -1,32 +1,30 @@
 @use "../../scss/variables" as *;
 @use "../../scss/mixins" as *;
 
-.grammar-selection-card-link {
-    text-decoration: none;
-}
-
-.grammar-selection-card-link:hover {
-    transition: background-color 0.2s ease-in-out;
-    background-color: $sumo_iro;
-    p {
-        color: $white;
-    }
-}
-
 .grammar-selection-card-div {
-    width: 100px;
-    height: 150px;
-    border: 3px solid $sumo_iro;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
+  width: 100px;
+  height: 150px;
+  border: 3px solid $sumo_iro;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.grammar-selection-card-div:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: $sumo_iro;
+  p {
+    color: $white;
+  }
+
+  cursor: pointer;
 }
 
 .grammar-selection-card-text {
-    display: flex;
-    font-size: larger;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-    color: $sumo_iro;
+  display: flex;
+  font-size: larger;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  color: $sumo_iro;
 }

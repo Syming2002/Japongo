@@ -1,18 +1,6 @@
 @use "../../scss/variables" as *;
 @use "../../scss/mixins" as *;
 
-.menu-burger-button {
-  @include menu-burger-button();
-  transition: transform 0.5s ease;
-  transform: translate(0%);
-}
-
-.menu-burger-button-active {
-  @include menu-burger-button();
-  transition: transform 0.5s ease;
-  transform: translate(600%);
-}
-
 .bar {
   width: 50%;
   background-color: $white;
@@ -47,6 +35,62 @@
 .bar-3-active {
   transition: transform 0.5s ease;
   transform: rotate(-45deg) translate(12px, -12px);
+}
+
+@media (width > 425px) and (width <= 768px) {
+  .menu-burger-button {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+
+  .menu-burger-button-active {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(650%);
+  }
+}
+
+@media (width > 375px) and (width <= 425px) {
+  .menu-burger-button {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+
+  .menu-burger-button-active {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(600%);
+  }
+}
+
+@media (width > 320px) and (width <= 375px) {
+  .menu-burger-button {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+
+  .menu-burger-button-active {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(550%);
+  }
+}
+
+@media (width <= 320px) {
+  .menu-burger-button {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+
+  .menu-burger-button-active {
+    @include menu-burger-button();
+    transition: transform 0.5s ease;
+    transform: translate(450%);
+  }
 }
 
 @media (width > 768px) {

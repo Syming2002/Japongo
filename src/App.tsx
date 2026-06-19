@@ -1,12 +1,13 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import { KanaProvider } from "./hooks/useKana";
 import KanaPage from "./pages/KanaPage";
 import KanjiCategoryListPage from "./pages/KanjiCategoryListPage";
 import { KanjiProvider } from "./hooks/useKanji";
 import KanjiListPage from "./pages/KanjiListPage";
-import GrammarMainPage from "./pages/GrammarMainPage";
-import NoParticuleGrammarPage from "./pages/NoParticuleGrammarPage";
+import GrammarMainPage from "./pages/grammar/GrammarMainPage";
+import { HIRAGANA_PARTICULE } from "./utils/kana";
+import GrammarParticulePage from "./pages/grammar/GrammarParticlePage";
 
 function App() {
   return (
@@ -38,7 +39,12 @@ function App() {
               element={<KanjiListPage level="jlpt-1" levelTitle="JLPT N1" />}
             />
             <Route path="/grammar" element={<GrammarMainPage />} />
-            <Route path="/no-particle" element={<NoParticuleGrammarPage />} />
+            {HIRAGANA_PARTICULE.map((hiragana) => (
+              <Route
+                path={`/particle/${hiragana}`}
+                element={<GrammarParticulePage hiraganaParticle={hiragana} />}
+              />
+            ))}
           </Routes>
         </KanjiProvider>
       </KanaProvider>

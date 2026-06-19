@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import Button from "./Button";
 import "./css/Navbar.css";
 

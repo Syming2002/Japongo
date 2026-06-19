@@ -2,32 +2,31 @@
 @use "../../scss/mixins" as *;
 
 .kanji-category-link {
-    text-decoration: none;
-    
+  text-decoration: none;
 }
 
 .kanji-category-link:hover {
-    transition: background-color 0.2s ease-in-out;
-    background-color: $sumo_iro;
-    p {
-        color: $white;
-    }
+  transition: background-color 0.2s ease-in-out;
+  background-color: $sumo_iro;
+  p {
+    color: $white;
+  }
 }
 
 .kanji-category-div {
-    width: 100px;
-    height: 150px;
-    border: 3px solid $sumo_iro;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
+  width: 100px;
+  height: 150px;
+  border: 3px solid $sumo_iro;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .level-text {
-    display: flex;
-    font-size: larger;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-    color: $sumo_iro;
+  display: flex;
+  font-size: larger;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  color: $sumo_iro;
 }

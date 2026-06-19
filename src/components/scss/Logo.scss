@@ -4,6 +4,12 @@
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 #upper-logo {
@@ -51,6 +57,6 @@
 
 @media (width <= 768px) {
   #logo {
-    padding-top: 150px;
+    margin-top: 150px;
   }
 }

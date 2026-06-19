@@ -24,15 +24,15 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
       try {
         setLoading(true);
 
-        const res = await fetch(`https://kanjiapi.dev/v1/kanji/${level}`);
-        const kanjiArray: string[] = await res.json();
+        const levelRes = await fetch(`https://kanjiapi.dev/v1/kanji/${level}`);
+        const kanjiArray: string[] = await levelRes.json();
 
         const results: Kanji[] = await Promise.all(
           kanjiArray.map(async (kanji) => {
-            const res = await fetch(
+            const kanjiRes = await fetch(
               `https://kanjiapi.dev/v1/kanji/${kanji}`,
             ).finally(() => setLoading(false));
-            return res.json();
+            return kanjiRes.json();
           }),
         );
 
@@ -58,11 +58,7 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
         <tbody>
           <tr className="kanji-table-row">
             {kanji.map((kanji, index) => (
-              <KanjiCard
-                kanji={kanji.kanji}
-                key={index}
-                meaningEn={kanji.heisig_en}
-              />
+              <KanjiCard kanji={kanji.kanji} key={index} />
             ))}
           </tr>
         </tbody>

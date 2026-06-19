@@ -27,7 +27,7 @@
     font-size: 56px;
     border-radius: 10px;
     border: 2px solid #27221F;
-    width: 110px;
+    width: 150px;
     height: 200px;
     gap: 15px;
   }
@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 110px;
+    width: 150px;
     height: 200px;
     gap: 15px;
     padding: 10px;
@@ -91,7 +91,43 @@
     text-align: center;
   }
 }
-@media (width < 426px) {
+@media (width > 375px) and (width <= 425px) {
+  .kana-card-table {
+    font-size: 75px;
+    border-radius: 10px;
+    border: 2px solid #27221F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 110px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .kana-card-table-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 110px;
+    padding: 10px;
+    border-style: none;
+  }
+  .kana-text {
+    font-size: 25px;
+    text-align: center;
+  }
+  #kana-romaji-hr {
+    border: 1px solid #27221F;
+    margin: 0 auto;
+    width: 75%;
+  }
+  .romaji-text {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media (width <= 375px) {
   .kana-card-table {
     font-size: 75px;
     border-radius: 10px;

@@ -14,3 +14,10 @@ section {
     width: 50%;
   }
 }
+
+@media (width <= 375px) {
+  section {
+    width: 50%;
+    font-size: 20px;
+  }
+}

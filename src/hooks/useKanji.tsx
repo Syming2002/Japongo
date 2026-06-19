@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 import * as kanjiUtils from "../utils/kanji";
 
 export interface IKanji {
@@ -37,7 +43,7 @@ export const useKana = () => {
 };
 
 interface KanjiProviderProps {
-  children: any;
+  children: ReactNode;
 }
 
 export function KanjiProvider({ children }: KanjiProviderProps) {

@@ -2,18 +2,6 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-.grammar-selection-card-link {
-  text-decoration: none;
-}
-
-.grammar-selection-card-link:hover {
-  transition: background-color 0.2s ease-in-out;
-  background-color: #27221F;
-}
-.grammar-selection-card-link:hover p {
-  color: #FFFFFF;
-}
-
 .grammar-selection-card-div {
   width: 100px;
   height: 150px;
@@ -21,6 +9,17 @@
   display: flex;
   justify-content: center;
   border-radius: 5px;
+}
+
+.grammar-selection-card-div:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: #27221F;
+}
+.grammar-selection-card-div:hover p {
+  color: #FFFFFF;
+}
+.grammar-selection-card-div:hover {
+  cursor: pointer;
 }
 
 .grammar-selection-card-text {

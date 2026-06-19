@@ -1,8 +1,13 @@
+.kanji-category-list-div {
+  height: 100%;
+}
+
 @media (width >= 1024px) {
   #kanji-category-list-main-title {
     text-align: center;
+    margin-top: 50px;
   }
-  #kanji-category-list-div {
+  #kanji-jlpt-category-list-div {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -14,9 +19,9 @@
     margin-top: 25px;
     text-align: center;
   }
-  #kanji-category-list-div {
+  #kanji-jlpt-category-list-div {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 50px;

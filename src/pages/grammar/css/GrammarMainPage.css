@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+.grammar-main-page-tooltip {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.grammar-selection-list-div-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grammar-selection-list-div {
+  display: grid;
+  width: 750px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.main-hr-footer {
+  width: 880px;
+  border: 1px solid #27221F;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+@media (width <= 768px) {
+  #grammar-main-page-div {
+    height: 100vh;
+  }
+}

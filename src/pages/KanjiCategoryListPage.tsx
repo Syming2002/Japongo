@@ -22,11 +22,11 @@ export type Kanji = {
 
 function KanjiCategoryListPage() {
   return (
-    <>
+    <div className="kanji-category-list-div">
       <Header />
       <Sidebar />
       <h1 id="kanji-category-list-main-title">Liste des Kanji par JLPT</h1>
-      <div id="kanji-category-list-div">
+      <div id="kanji-jlpt-category-list-div">
         <KanjiCategory level="JLPT N5" path="kanjiN5" />
         <KanjiCategory level="JLPT N4" path="kanjiN4" />
         <KanjiCategory level="JLPT N3" path="kanjiN3" />
@@ -38,7 +38,7 @@ function KanjiCategoryListPage() {
         footerClassName="main-footer"
         footerHrClassName="main-hr-footer"
       />
-    </>
+    </div>
   );
 }
 

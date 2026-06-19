@@ -6,6 +6,14 @@
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 #upper-logo {
@@ -53,6 +61,6 @@
 
 @media (width <= 768px) {
   #logo {
-    padding-top: 150px;
+    margin-top: 150px;
   }
 }

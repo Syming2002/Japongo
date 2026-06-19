@@ -501,3 +501,18 @@ export const KATAKANA_YÔON: string[] = [
   "リュ",
   "リョ",
 ];
+
+export const HIRAGANA_PARTICULE: string[] = [
+  "の",
+  "と",
+  "や",
+  "は",
+  "に",
+  "で",
+  "へ",
+  "を",
+  "から",
+  "まで",
+  "が",
+  "も",
+];

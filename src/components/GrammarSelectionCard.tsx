@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import "./css/GarmmarSelectionCard.css";
 
@@ -11,12 +11,19 @@ function GrammarSelectionCard({
   grammarPath,
   grammarTheme,
 }: GrammarSelectionCardProps) {
+  const navigate = useNavigate();
+
+  function onGrammarCardClick(link: string) {
+    navigate(link);
+  }
+
   return (
-    <Link to={grammarPath} className="grammar-selection-card-link">
-      <div className="grammar-selection-card-div">
-        <p className="grammar-selection-card-text">{grammarTheme}</p>
-      </div>
-    </Link>
+    <div
+      className="grammar-selection-card-div"
+      onClick={() => onGrammarCardClick(grammarPath)}
+    >
+      <p className="grammar-selection-card-text">{grammarTheme}</p>
+    </div>
   );
 }
 

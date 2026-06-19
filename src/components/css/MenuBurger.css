@@ -2,40 +2,6 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
-.menu-burger-button {
-  background-color: #27221F;
-  font-family: Yu Mincho;
-  display: flex;
-  position: fixed;
-  top: 20px;
-  left: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  transition: transform 0.5s ease;
-  transform: translate(0%);
-}
-
-.menu-burger-button-active {
-  background-color: #27221F;
-  font-family: Yu Mincho;
-  display: flex;
-  position: fixed;
-  top: 20px;
-  left: 25px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  transition: transform 0.5s ease;
-  transform: translate(600%);
-}
-
 .bar {
   width: 50%;
   background-color: #FFFFFF;
@@ -72,6 +38,142 @@
   transform: rotate(-45deg) translate(12px, -12px);
 }
 
+@media (width > 425px) and (width <= 768px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(650%);
+  }
+}
+@media (width > 375px) and (width <= 425px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(600%);
+  }
+}
+@media (width > 320px) and (width <= 375px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(550%);
+  }
+}
+@media (width <= 320px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    font-family: Yu Mincho;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(450%);
+  }
+}
 @media (width > 768px) {
   .menu-burger-button {
     display: none;
