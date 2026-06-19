@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import { KanaProvider } from "./hooks/useKana";
 import KanaPage from "./pages/KanaPage";
@@ -11,7 +11,7 @@ import GrammarParticulePage from "./pages/grammar/GrammarParticlePage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <KanaProvider>
         <KanjiProvider>
           <Routes>
@@ -48,7 +48,7 @@ function App() {
           </Routes>
         </KanjiProvider>
       </KanaProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

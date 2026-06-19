@@ -1,11 +1,9 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useState,
   type ReactNode,
 } from "react";
-import * as kanjiUtils from "../utils/kanji";
 
 export interface IKanji {
   kanji: {
@@ -47,13 +45,7 @@ interface KanjiProviderProps {
 }
 
 export function KanjiProvider({ children }: KanjiProviderProps) {
-  const [loading, setLoading] = useState(true);
-  const [kanji, setKanji] = useState([]);
-
-  useEffect(() => {
-    setLoading(true);
-    fetch("").then().then().catch().finally();
-  }, []);
+  const [kanji] = useState([]);
 
   return (
     <KanjiContext.Provider value={{ kanji }}>{children}</KanjiContext.Provider>
