@@ -3,17 +3,13 @@ import HomePage from "./pages/HomePage";
 import { KanaProvider } from "./hooks/useKana";
 import KanaPage from "./pages/KanaPage";
 import KanjiCategoryListPage from "./pages/kanji/KanjiCategoryListPage";
-import { KanjiProvider, useKanji } from "./hooks/useKanji";
 import KanjiListPage from "./pages/kanji/KanjiListPage";
 import GrammarMainPage from "./pages/grammar/GrammarMainPage";
 import { HIRAGANA_PARTICULE } from "./utils/kana";
 import GrammarParticulePage from "./pages/grammar/GrammarParticlePage";
 import KanjiDetailsPage from "./pages/kanji/KanjiDetailsPage";
-import { KANJI_LEVEL_URL } from "./utils/kanji";
 
 function App() {
-  const kanjiCtx = useKanji();
-
   return (
     <HashRouter>
       <KanaProvider>
