@@ -17,7 +17,7 @@ function GrammarParticulePage({ hiraganaParticle }: GrammarParticulePageProps) {
       <Sidebar />
       <h1
         className={
-          "particule-main-title " + hiraganaParticle + "particule-main-title"
+          "particle-main-title " + hiraganaParticle + "particle-main-title"
         }
       >
         {"Bienvenue sur le cours de grammaire de la particule " +

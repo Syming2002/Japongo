@@ -2,15 +2,14 @@ import "./css/KanjiCard.css";
 
 interface KanjiCardProps {
   kanji: string;
+  onKanjiCardClick(): void;
 }
 
-function KanjiCard({ kanji }: KanjiCardProps) {
+function KanjiCard({ kanji, onKanjiCardClick }: KanjiCardProps) {
   return (
     <>
-      <td className="kanji-card">
+      <td onClick={onKanjiCardClick} className="kanji-card">
         {kanji}
-        {/* <hr className="kanji-meaning-hr" />
-        <p className="kanji-meaning">{meaningEn}</p> */}
       </td>
     </>
   );

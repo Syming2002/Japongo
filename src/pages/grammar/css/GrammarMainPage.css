@@ -30,6 +30,13 @@
 
 @media (width <= 768px) {
   #grammar-main-page-div {
-    height: 100vh;
+    height: 100%;
+  }
+  .grammar-selection-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 20px;
   }
 }

@@ -158,7 +158,7 @@
   }
 
   .sidebar-button {
-    @include sidebar-button-small-mobile();
+    @include sidebar-button-very-small-mobile();
   }
 
   .sidebar {

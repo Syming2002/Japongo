@@ -1,5 +1,12 @@
 @use "../../scss/variables" as *;
 
+.kanji-card:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: $sumo_iro;
+  cursor: pointer;
+  color: $white;
+}
+
 @media (width > 1024px) {
   .kanji-card {
     font-size: 50px;

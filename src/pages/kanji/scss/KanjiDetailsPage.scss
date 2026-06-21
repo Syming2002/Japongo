@@ -1,0 +1,41 @@
+@use "../../../scss/variables" as *;
+
+.kanji-details-page-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.kanji-details-card-wrapper {
+}
+
+.kanji-details-card {
+  box-shadow:
+    2px 3px 20px black,
+    0 0 60px #8a4d0f inset;
+  background-color: $japanese_white;
+  border: 2px solid $sumo_iro;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+
+  width: fit-content;
+}
+
+.kanji-details-main-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.kanji-details-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+  font-size: 2rem;
+}

@@ -17,13 +17,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 96px;
+    align-items: center;
+    width: 150px;
     height: 40px;
-    padding: 10px;
+    padding: 35px 50px;
     border-radius: 10px;
     color: #FFFFFF;
     font-family: Yu Mincho;
-    font-size: 15px;
+    font-size: 26px;
   }
   .sidebar {
     display: flex;
@@ -88,9 +89,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 80px;
+    align-items: center;
+    width: 95px;
     height: 40px;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 10px;
     color: #FFFFFF;
     font-family: Yu Mincho;
@@ -159,9 +161,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 96px;
+    align-items: center;
+    width: 95px;
     height: 40px;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 10px;
     color: #FFFFFF;
     font-family: Yu Mincho;
