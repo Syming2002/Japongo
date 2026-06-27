@@ -4,10 +4,15 @@
 .grammar-selection-card-div {
   width: 100px;
   height: 150px;
-  border: 3px solid $sumo_iro;
+  box-shadow:
+    2px 3px 20px black,
+    0 0 60px #8a4d0f inset;
+  background-color: $japanese_white;
+  border: 2px solid $sumo_iro;
   display: flex;
   justify-content: center;
   border-radius: 5px;
+  font-family: Yu Mincho;
 }
 
 .grammar-selection-card-div:hover {
@@ -27,4 +32,60 @@
   align-self: center;
   text-align: center;
   color: $sumo_iro;
+}
+
+@media (width > 1440px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+@media (width > 1024px) and (width <= 1440px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+@media (width > 768px) and (width <= 1024px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+@media (width > 425px) and (width <= 768px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (width > 375px) and (width <= 425px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (width > 320px) and (width <= 375px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (width <= 320px) {
+  .grammar-selection-card-div {
+    p {
+      font-size: 2rem;
+    }
+  }
 }

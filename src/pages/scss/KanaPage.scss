@@ -1,6 +1,6 @@
 @use "../../scss/variables" as *;
 
-@media (width >= 1024px) {
+@media (width > 1024px) {
   #hiragana-title {
     text-align: center;
     padding: 25px;

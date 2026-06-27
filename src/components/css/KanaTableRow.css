@@ -1,53 +1,37 @@
+.kana-table-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @media (width > 1440px) {
   .kana-table-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 100px;
   }
 }
 @media (width > 1024px) and (width <= 1440px) {
   .kana-table-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
   }
 }
 @media (width > 768px) and (width <= 1024px) {
   .kana-table-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 25px;
   }
 }
 @media (width > 425px) and (width <= 768px) {
   .kana-table-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 25px;
   }
 }
 @media (width > 375px) and (width <= 425px) {
   .kana-table-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
   }
 }
 @media (width <= 375px) {
   .kana-table-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 10px;
   }
 }

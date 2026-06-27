@@ -8,6 +8,8 @@ import GrammarMainPage from "./pages/grammar/GrammarMainPage";
 import { HIRAGANA_PARTICULE } from "./utils/kana";
 import GrammarParticulePage from "./pages/grammar/GrammarParticlePage";
 import KanjiDetailsPage from "./pages/kanji/KanjiDetailsPage";
+import VerbsMainPage from "./pages/verbs/VerbsMainPage";
+import VocabularyMainPage from "./pages/vocabulary/VocabularyMainPage";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
             path={"/:kanjiJLPT/:kanjiCharacter"}
             element={<KanjiDetailsPage />}
           />
+          <Route path={"/verbs"} element={<VerbsMainPage />} />
+          <Route path={"/vocabulary"} element={<VocabularyMainPage />} />
         </Routes>
       </KanaProvider>
     </HashRouter>

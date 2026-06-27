@@ -1,5 +1,13 @@
 @use "../../scss/variables" as *;
 
+.kanji-card {
+  box-shadow:
+    2px 3px 20px black,
+    0 0 60px #8a4d0f inset;
+  background-color: $japanese_white;
+  border: 2px solid $sumo_iro;
+}
+
 .kanji-card:hover {
   transition: background-color 0.2s ease-in-out;
   background-color: $sumo_iro;
@@ -11,7 +19,6 @@
   .kanji-card {
     font-size: 50px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,21 +26,10 @@
 
     border-style: "1px solid $sumo_iro";
     width: 250px;
-  }
+    font-family: Yu Mincho;
 
-  td {
     padding: 25px;
     text-align: center;
-  }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 75%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    font-size: 25px;
   }
 }
 
@@ -41,7 +37,6 @@
   .kanji-card {
     font-size: 50px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,23 +45,12 @@
     border-style: "1px solid $sumo_iro";
     width: 250px;
   }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 75%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    font-size: 25px;
-  }
 }
 
 @media (width > 425px) and (width <= 768px) {
   .kanji-card {
     font-size: 50px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,23 +60,12 @@
     width: 100px;
     height: 185px;
   }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 75%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    font-size: 18px;
-  }
 }
 
 @media (width > 375px) and (width <= 425px) {
   .kanji-card {
     font-size: 20px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,17 +75,6 @@
 
     width: 60px;
     height: 125px;
-  }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 50%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 15px;
   }
 }
 
@@ -120,7 +82,6 @@
   .kanji-card {
     font-size: 16px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,24 +92,12 @@
     width: 60px;
     height: 125px;
   }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 50%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 15px;
-  }
 }
 
 @media (width <= 320px) {
   .kanji-card {
     font-size: 18px;
     border-radius: 10px;
-    border: 2px solid $sumo_iro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,16 +107,5 @@
 
     width: 50px;
     height: 125px;
-  }
-
-  .kanji-meaning-hr {
-    border: 1px solid $sumo_iro;
-    width: 50%;
-  }
-
-  .kanji-meaning {
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 18px;
   }
 }

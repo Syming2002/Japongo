@@ -19,7 +19,6 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
   console.log(kanjiCtx.kanjiArray);
 
   useEffect(() => {
-    kanjiCtx.setLoading(true);
     async function fetchKanji() {
       try {
         kanjiCtx.setLoading(true);
@@ -31,7 +30,7 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
           kanjiArray.map(async (kanji) => {
             const kanjiRes = await fetch(
               `https://kanjiapi.dev/v1/kanji/${kanji}`,
-            ).finally(() => kanjiCtx.setLoading(false));
+            );
             return kanjiRes.json();
           }),
         );

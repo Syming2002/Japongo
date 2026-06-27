@@ -4,6 +4,9 @@
 }
 .kanji-category-link {
   text-decoration: none;
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background-color: #EEE6D9;
+  border: 2px solid #27221F;
 }
 
 .kanji-category-link:hover {
@@ -17,7 +20,6 @@
 .kanji-category-div {
   width: 100px;
   height: 150px;
-  border: 3px solid #27221F;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -25,7 +27,7 @@
 
 .level-text {
   display: flex;
-  font-size: larger;
+  font-size: 2rem;
   justify-self: center;
   align-self: center;
   text-align: center;

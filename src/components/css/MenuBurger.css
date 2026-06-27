@@ -15,12 +15,13 @@
 
 .bar-1-active {
   transition: transform 0.5s ease;
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(9px, 9px);
 }
 
 .bar-2 {
   transition: opacity 0.5s ease;
   opacity: 1;
+  width: 33%;
 }
 
 .bar-2-active {
@@ -35,20 +36,20 @@
 
 .bar-3-active {
   transition: transform 0.5s ease;
-  transform: rotate(-45deg) translate(12px, -12px);
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 @media (width > 425px) and (width <= 768px) {
   .menu-burger-button {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -57,14 +58,14 @@
   }
   .menu-burger-button-active {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -75,14 +76,14 @@
 @media (width > 375px) and (width <= 425px) {
   .menu-burger-button {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -91,14 +92,14 @@
   }
   .menu-burger-button-active {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -109,14 +110,14 @@
 @media (width > 320px) and (width <= 375px) {
   .menu-burger-button {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -125,14 +126,14 @@
   }
   .menu-burger-button-active {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -143,14 +144,14 @@
 @media (width <= 320px) {
   .menu-burger-button {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;
@@ -159,14 +160,14 @@
   }
   .menu-burger-button-active {
     background-color: #27221F;
-    font-family: Yu Mincho;
     display: flex;
     position: fixed;
     top: 20px;
     left: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     border-radius: 5px;
     width: 50px;
     height: 50px;

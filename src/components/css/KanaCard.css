@@ -2,11 +2,22 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
+.kana-card-table {
+  border-radius: 10px;
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background-color: #EEE6D9;
+  border: 2px solid #27221F;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#kana-romaji-hr {
+  border: 1px solid #27221F;
+}
+
 @media (width > 1440px) {
   .kana-card-table {
     font-size: 56px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     width: 180px;
   }
   .kana-card-table-empty {
@@ -14,7 +25,6 @@
     border-style: none;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 75%;
   }
@@ -22,8 +32,6 @@
 @media (width > 1024px) and (width <= 1440px) {
   .kana-card-table {
     font-size: 56px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     width: 180px;
   }
   .kana-card-table-empty {
@@ -31,7 +39,6 @@
     border-style: none;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 75%;
   }
@@ -42,8 +49,6 @@
     flex-direction: column;
     justify-content: center;
     font-size: 56px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     width: 150px;
     height: 200px;
     gap: 15px;
@@ -63,7 +68,6 @@
     text-align: center;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 50%;
   }
@@ -75,8 +79,6 @@
 @media (width > 425px) and (width <= 768px) {
   .kana-card-table {
     font-size: 75px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +101,6 @@
     text-align: center;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 75%;
   }
@@ -111,8 +112,6 @@
 @media (width > 375px) and (width <= 425px) {
   .kana-card-table {
     font-size: 75px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +134,6 @@
     text-align: center;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 75%;
   }
@@ -147,11 +145,11 @@
 @media (width <= 375px) {
   .kana-card-table {
     font-size: 75px;
-    border-radius: 10px;
-    border: 2px solid #27221F;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
+    background-color: #EEE6D9;
     width: 50px;
     height: 110px;
     padding: 10px;
@@ -171,7 +169,6 @@
     text-align: center;
   }
   #kana-romaji-hr {
-    border: 1px solid #27221F;
     margin: 0 auto;
     width: 75%;
   }

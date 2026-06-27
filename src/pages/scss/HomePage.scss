@@ -1,5 +1,11 @@
 @use "../../scss/variables" as *;
 
+.home-page-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (width > 768px) {
   .main-footer {
     display: flex;

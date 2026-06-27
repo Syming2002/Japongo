@@ -63,7 +63,7 @@
     height: 674px;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
   }
   .sidebar-footer {
     display: flex;

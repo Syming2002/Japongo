@@ -1,24 +1,50 @@
 import { useParams } from "react-router";
-import { useKanji } from "../../hooks/useKanji";
+import { type KanjiDetails } from "../../hooks/useKanji";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 
 import "./css/KanjiDetailsPage.css";
+import { useEffect, useState } from "react";
 
 type KanjiParams = {
   kanjiCharacter?: string;
 };
 
 function KanjiDetailsPage() {
-  const kanjiCtx = useKanji();
   const { kanjiCharacter } = useParams<KanjiParams>();
+  const [kanji, setKanji] = useState<KanjiDetails>();
 
-  const kanji = kanjiCtx.kanjiArray.find(
-    (kanji) => kanji.kanji === kanjiCharacter,
-  );
+  useEffect(() => {
+    async function fetchKanjiDetails() {
+      try {
+        const res = await fetch(
+          `https://kanjiapi.dev/v1/kanji/${kanjiCharacter}`,
+        );
+        const data = await res.json();
 
-  if (!kanji) {
-    return <p>Kanji introuvable</p>;
+        setKanji(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    fetchKanjiDetails();
+  }, [kanji]);
+
+  function kanjiDetection(kanjiFinded: KanjiDetails | undefined) {
+    return !kanjiFinded ? (
+      <p>Kanji introuvable</p>
+    ) : (
+      <>
+        <h1 className="kanji-details-main-title">Détails du kanji</h1>
+        <p className="kanji-character">{kanjiCharacter}</p>
+        <div className="kanji-details-div">
+          <p id="kanji-jlpt-level">{`JLPT: ${kanjiFinded.jlpt}`}</p>
+          <p id="kanji-stroke-count">{`Nombre de trait: ${kanjiFinded.stroke_count}`}</p>
+          <p id="kanji-meaning">{`Signification: ${kanjiFinded.heisig_en}`}</p>
+        </div>
+      </>
+    );
   }
 
   return (
@@ -26,14 +52,7 @@ function KanjiDetailsPage() {
       <Header />
       <Sidebar />
       <div className="kanji-details-card-wrapper">
-        <div className="kanji-details-card">
-          <h1 className="kanji-details-main-title">{`Détails du kanji ${kanjiCharacter}`}</h1>
-          <div className="kanji-details-div">
-            <p>{`JLPT: ${kanji.jlpt}`}</p>
-            <p>{`Nombre de trait: ${kanji.stroke_count}`}</p>
-            <p>{`Signification: ${kanji.heisig_en}`}</p>
-          </div>
-        </div>
+        <div className="kanji-details-card">{kanjiDetection(kanji)}</div>
       </div>
     </div>
   );
