@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-import "./css/GarmmarSelectionCard.css";
+import "../css/cards.css";
 
 interface GrammarSelectionCardProps {
   grammarPath: string;

@@ -1,4 +1,4 @@
-import "./css/KanjiCard.css";
+import "../css/cards.css";
 
 interface KanjiCardProps {
   kanji: string;
@@ -8,9 +8,9 @@ interface KanjiCardProps {
 function KanjiCard({ kanji, onKanjiCardClick }: KanjiCardProps) {
   return (
     <>
-      <td onClick={onKanjiCardClick} className="kanji-card">
+      <button onClick={onKanjiCardClick} className="kanji-card">
         {kanji}
-      </td>
+      </button>
     </>
   );
 }

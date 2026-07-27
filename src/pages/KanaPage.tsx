@@ -4,7 +4,7 @@ import KanaTableRow from "../components/KanaTableRow";
 import Sidebar from "../components/Sidebar";
 import { useKana } from "../hooks/useKana";
 
-import "./css/KanaPage.css";
+import "../css/pages.css";
 
 function KanaPage() {
   const kana = useKana();

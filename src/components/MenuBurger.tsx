@@ -1,4 +1,4 @@
-import "./css/MenuBurger.css";
+import "../css/sidebar.css";
 
 interface MenuBurgerProps {
   toggle: boolean;

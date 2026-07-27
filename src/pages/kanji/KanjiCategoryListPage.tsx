@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import KanjiCategory from "../../components/KanjiCategory";
 import Sidebar from "../../components/Sidebar";
 
-import "./css/KanjiCategoryListPage.css";
+import "../../css/pages.css";
 
 function KanjiCategoryListPage() {
   return (

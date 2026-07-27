@@ -1,4 +1,4 @@
-import "./css/KanaCard.css";
+import "../css/cards.css";
 
 interface KanaCardProps {
   kana: string;

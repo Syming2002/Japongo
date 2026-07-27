@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import GrammarSelectionCard from "../../components/GrammarSelectionCard";
 
-import "./css/GrammarMainPage.css";
+import "../../css/pages.css";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
 import { HIRAGANA_PARTICULE } from "../../utils/kana";

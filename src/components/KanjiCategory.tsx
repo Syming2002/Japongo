@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./css/KanjiCategory.css";
+import "../css/cards.css";
 
 interface KanjiCategoryProps {
   level: string;

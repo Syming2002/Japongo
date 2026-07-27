@@ -1,17 +1,16 @@
 @use "../scss/variables" as *;
 
-@mixin navbar-button {
+@mixin navbar-link {
   background-color: $sumo_iro;
   width: 150px;
   height: 60px;
   padding: 10px;
   border-radius: 10px;
   color: $white;
-  font-family: Yu Mincho;
   font-size: 24px;
 }
 
-@mixin sidebar-button {
+@mixin sidebar-link {
   background-color: $sumo_iro;
   display: flex;
   justify-content: center;
@@ -22,11 +21,10 @@
   padding: 10px;
   border-radius: 10px;
   color: $white;
-  font-family: Yu Mincho;
   font-size: 20px;
 }
 
-@mixin sidebar-button-small-mobile {
+@mixin sidebar-link-small-mobile {
   background-color: $sumo_iro;
   display: flex;
   justify-content: center;
@@ -37,11 +35,10 @@
   padding: 35px 50px;
   border-radius: 10px;
   color: $white;
-  font-family: Yu Mincho;
   font-size: 26px;
 }
 
-@mixin sidebar-button-very-small-mobile {
+@mixin sidebar-link-very-small-mobile {
   background-color: $sumo_iro;
   display: flex;
   justify-content: center;
@@ -52,13 +49,11 @@
   padding: 10px 30px;
   border-radius: 10px;
   color: $white;
-  font-family: Yu Mincho;
   font-size: 15px;
 }
 
 @mixin section {
   background-color: $sumo_iro;
-  font-family: Yu Mincho;
   color: $white;
   font-size: 30px;
   border-radius: 10px;

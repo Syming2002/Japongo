@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#upper-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: -30px;
+}
+
+#dot {
+  background-color: #CB1B45;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+#vertical-bar {
+  background-color: #CB1B45;
+  width: 30px;
+  height: 100px;
+  border-radius: 0 0 30px 30px;
+}
+
+#lower-logo {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+#horizontal-bar {
+  display: flex;
+  background-color: #CB1B45;
+  width: 70px;
+  height: 30px;
+  border-radius: 0 0 25px 70px;
+  margin-left: -25px;
+}
+
+#buckle {
+  background-color: #CB1B45;
+  width: 30px;
+  height: 50px;
+  border-radius: 30px 30px 0 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 120px;
+  gap: 25px;
+  margin-top: 100px;
+}
+
+.nav-link {
+  background-color: #27221F;
+  width: 150px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 24px;
+  transform: translateY(0%);
+  transition: transform 0.5s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #574c45;
+  transform: translateY(-5%);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* Up to mobile responsive */
+@media (width > 768px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hr-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #logo-nav-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  #header-hr {
+    width: 500px;
+    border: 1px solid #27221F;
+    margin: 50px auto 0;
+  }
+}
+/* Down to mobile responsive */
+@media (width <= 768px) {
+  .main-header {
+    display: none;
+  }
+  #logo {
+    margin-top: 150px;
+  }
+}

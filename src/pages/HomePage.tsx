@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import Sidebar from "../components/Sidebar";
 
-import "./css/Homepage.css";
+import "../css/pages.css";
 
 function HomePage() {
   return (

@@ -1,7 +1,7 @@
 import type { Kana } from "../hooks/useKana";
 import KanaCard from "./KanaCard";
 
-import "./css/KanaTableRow.css";
+import "../css/cards.css";
 
 interface KanaTableRowProps {
   kanaArray: Kana;

@@ -2,8 +2,179 @@
   font-family: Yu Mincho;
   src: url("/src/assets/fonts/yumin.ttf");
 }
+@media (width <= 768px) {
+  .bar {
+    width: 50%;
+    background-color: #FFFFFF;
+    height: 2px;
+  }
+  .bar-1 {
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+  }
+  .bar-1-active {
+    transition: transform 0.5s ease;
+    transform: rotate(45deg) translate(9px, 9px);
+  }
+  .bar-2 {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    width: 33%;
+  }
+  .bar-2-active {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .bar-3 {
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+  }
+  .bar-3-active {
+    transition: transform 0.5s ease;
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
+@media (width > 425px) and (width <= 768px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: float 0.5s ease;
+    float: left;
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: float 0.5s ease;
+    float: right;
+  }
+}
+@media (width > 375px) and (width <= 425px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(600%);
+  }
+}
+@media (width > 320px) and (width <= 375px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(550%);
+  }
+}
+@media (width <= 320px) {
+  .menu-burger-button {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221F;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(450%);
+  }
+}
 @media (width > 768px) {
   .sidebar-wrapper {
+    display: none;
+  }
+  .menu-burger-button {
     display: none;
   }
 }
@@ -12,7 +183,7 @@
     display: flex;
     flex-direction: column;
   }
-  .sidebar-button {
+  .sidebar-link {
     background-color: #27221F;
     display: flex;
     justify-content: center;
@@ -23,7 +194,6 @@
     padding: 35px 50px;
     border-radius: 10px;
     color: #FFFFFF;
-    font-family: Yu Mincho;
     font-size: 26px;
   }
   .sidebar {
@@ -56,7 +226,7 @@
     border: 1px solid #27221F;
     border-radius: 0 5px 5px 0;
   }
-  .button-div {
+  .link-div {
     display: flex;
     flex-direction: column;
     width: 130px;
@@ -84,7 +254,7 @@
     display: flex;
     flex-direction: column;
   }
-  .sidebar-button {
+  .sidebar-link {
     background-color: #27221F;
     display: flex;
     justify-content: center;
@@ -95,7 +265,6 @@
     padding: 10px 30px;
     border-radius: 10px;
     color: #FFFFFF;
-    font-family: Yu Mincho;
     font-size: 15px;
   }
   .sidebar {
@@ -128,7 +297,7 @@
     border: 1px solid #27221F;
     border-radius: 0 5px 5px 0;
   }
-  .button-div {
+  .link-div {
     display: flex;
     flex-direction: column;
     width: 130px;
@@ -156,7 +325,7 @@
     display: flex;
     flex-direction: column;
   }
-  .sidebar-button {
+  .sidebar-link {
     background-color: #27221F;
     display: flex;
     justify-content: center;
@@ -167,7 +336,6 @@
     padding: 10px 30px;
     border-radius: 10px;
     color: #FFFFFF;
-    font-family: Yu Mincho;
     font-size: 15px;
   }
   .sidebar {
@@ -200,7 +368,7 @@
     border: 1px solid #27221F;
     border-radius: 0 5px 5px 0;
   }
-  .button-div {
+  .link-div {
     display: flex;
     flex-direction: column;
     width: 130px;

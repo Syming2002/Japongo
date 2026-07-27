@@ -1,54 +1,32 @@
 import { useState } from "react";
-import Button from "./Button";
 
-import "./css/Sidebar.css";
+import "../css/sidebar.css";
 import Footer from "./Footer";
 import Logo from "./Logo";
 import MenuBurger from "./MenuBurger";
-import { useNavigate } from "react-router";
+import LinkPage from "./LinkPage";
 
 function Sidebar() {
   const [toggle, setToggle] = useState(false);
-
-  const navigate = useNavigate();
 
   function handleMenuBurgerClick() {
     setToggle((prevToggle) => !prevToggle);
   }
 
-  function handleSidebarButtonClick(link: string) {
-    navigate(link);
-  }
+  const mainButtons = ["Kana", "Kanji", "Grammar", "Verbs", "Vocabulary"];
 
   return (
     <div className="sidebar-wrapper">
       <aside className={toggle ? "sidebar-active" : "sidebar"}>
-        <div className="button-div">
-          <Button
-            title="Kana"
-            className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/kana")}
-          />
-          <Button
-            title="Kanji"
-            className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/kanji")}
-          />
-          <Button
-            title="Grammaire"
-            className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/grammar")}
-          />
-          <Button
-            title="Verbes"
-            className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/verbs")}
-          />
-          <Button
-            title="Vocabulaire"
-            className="sidebar-button"
-            onClick={() => handleSidebarButtonClick("/vocabulary")}
-          />
+        <div className="link-div">
+          {mainButtons.map((button) => (
+            <LinkPage
+              title={button}
+              className="sidebar-link"
+              link={`${button.at(0)?.toLowerCase() + button.substring(1).toLowerCase()}`}
+              key={button}
+            />
+          ))}
         </div>
 
         <Footer

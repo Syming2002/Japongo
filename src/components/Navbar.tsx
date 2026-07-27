@@ -1,41 +1,19 @@
-import { useNavigate } from "react-router";
-import Button from "./Button";
-import "./css/Navbar.css";
+import "../css/header.css";
+import LinkPage from "./LinkPage";
 
 function Navbar() {
-  const navigate = useNavigate();
-
-  function handleNavButtonClick(link: string) {
-    navigate(link);
-  }
+  const mainButtons = ["Kana", "Kanji", "Grammar", "Verbs", "Vocabulary"];
 
   return (
     <nav>
-      <Button
-        title="Kana"
-        className="nav-button"
-        onClick={() => handleNavButtonClick("/kana")}
-      />
-      <Button
-        title="Kanji"
-        className="nav-button"
-        onClick={() => handleNavButtonClick("/kanji")}
-      />
-      <Button
-        title="Grammaire"
-        className="nav-button"
-        onClick={() => handleNavButtonClick("/grammar")}
-      />
-      <Button
-        title="Verbes"
-        className="nav-button"
-        onClick={() => handleNavButtonClick("/verbs")}
-      />
-      <Button
-        title="Vocabulaire"
-        className="nav-button"
-        onClick={() => handleNavButtonClick("/vocabulary")}
-      />
+      {mainButtons.map((button) => (
+        <LinkPage
+          title={button}
+          className="nav-link"
+          link={`/${button.at(0)?.toLowerCase() + button.substring(1).toLowerCase()}`}
+          key={button}
+        />
+      ))}
     </nav>
   );
 }

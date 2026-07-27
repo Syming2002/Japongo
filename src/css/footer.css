@@ -1,5 +1,7 @@
-@use "../../scss/variables" as *;
-
+@font-face {
+  font-family: Yu Mincho;
+  src: url("/src/assets/fonts/yumin.ttf");
+}
 @media (width > 768px) {
   #footer-div {
     display: flex;
@@ -8,22 +10,18 @@
     padding: 20px;
     gap: 50px;
   }
-
   .github-logo {
     font-size: 30px;
   }
-
   .version-paragraph {
-    font-size: 18px;
+    font-size: 30px;
     text-align: center;
   }
 }
-
 @media (width > 425px) and (width <= 768px) {
   .main-footer {
     display: none;
   }
-
   #footer-div {
     display: flex;
     flex-direction: column;
@@ -32,22 +30,18 @@
     padding: 20px;
     gap: 10px;
   }
-
   .github-logo {
     font-size: 36px;
   }
-
   .version-paragraph {
     font-size: 28px;
     text-align: center;
   }
 }
-
 @media (width > 375px) and (width <= 425px) {
   .main-footer {
     display: none;
   }
-
   #footer-div {
     display: flex;
     flex-direction: column;
@@ -56,22 +50,18 @@
     padding: 20px;
     gap: 10px;
   }
-
   .github-logo {
     font-size: 24px;
   }
-
   .version-paragraph {
     font-size: 18px;
     text-align: center;
   }
 }
-
 @media (width <= 375px) {
   .main-footer {
     display: none;
   }
-
   #footer-div {
     display: flex;
     flex-direction: column;
@@ -80,11 +70,9 @@
     padding: 20px;
     gap: 10px;
   }
-
   .github-logo {
     font-size: 24px;
   }
-
   .version-paragraph {
     font-size: 18px;
     text-align: center;

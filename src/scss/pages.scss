@@ -1,0 +1,332 @@
+@use "./variables" as *;
+
+.home-page-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanji-category-list-div {
+  height: 100%;
+}
+
+#kanji-category-list-main-title {
+  text-align: center;
+}
+
+#kanji-jlpt-category-list-div {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+#kanji-title {
+  text-align: center;
+  padding: 25px;
+  font-size: 42px;
+}
+
+.kanji-item {
+  list-style-type: none;
+}
+
+.kanji-details-page-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.kanji-details-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.kanji-details-card {
+  box-shadow:
+    2px 3px 20px black,
+    0 0 60px #8a4d0f inset;
+  background-color: $japanese_white;
+  border: 2px solid $sumo_iro;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 50px;
+  width: fit-content;
+}
+
+.kanji-details-main-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.kanji-character {
+  text-align: center;
+  font-size: 4.2rem;
+}
+
+.kanji-readings-div {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.kanji-details-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+  font-size: 2rem;
+}
+
+#kanji-jlpt-level {
+  text-align: center;
+}
+
+#kanji-stroke-count {
+  text-align: center;
+}
+
+#kanji-meaning {
+  text-align: center;
+}
+
+.grammar-main-page-tooltip {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 50px;
+}
+
+.grammar-selection-list-div-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grammar-selection-list-div {
+  display: grid;
+  width: 750px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.main-hr-footer {
+  width: 880px;
+  border: 1px solid $sumo_iro;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+.particle-main-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+@media (width > 1024px) {
+  #hiragana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  .kana-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px;
+  }
+
+  #kana-page-hr {
+    width: 880px;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #katakana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  #kanji-category-list-main-title {
+    margin-top: 50px;
+  }
+}
+
+@media (width > 768px) and (width <= 1024px) {
+  #hiragana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  .kana-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  #kana-page-hr {
+    width: 50%;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #katakana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  #kanji-category-list-main-title {
+    margin-top: 25px;
+  }
+
+  #kanji-jlpt-category-list-div {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+}
+
+@media (width > 768px) {
+  .main-footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+  }
+
+  .main-hr-footer {
+    width: 880px;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  .kanji-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 30px;
+  }
+
+  #kanji-page-hr {
+    width: 880px;
+    border: 1px solid #27221f;
+    justify-self: center;
+    margin-top: 50px;
+  }
+}
+
+@media (width <= 768px) {
+  .kanji-list {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .kanji-item {
+    list-style-type: none;
+  }
+
+  #kanji-page-hr {
+    width: 880px;
+    border: 1px solid #27221f;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #grammar-main-page-div {
+    height: 100%;
+  }
+
+  .grammar-selection-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 20px;
+  }
+
+  .particle-grammar-page-div {
+    height: 100vh;
+  }
+}
+
+@media (width > 425px) and (width <= 768px) {
+  #hiragana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  .kana-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+  }
+
+  #kana-page-hr {
+    width: 50%;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #katakana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+}
+
+@media (width <= 425px) {
+  #hiragana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  .kana-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+  }
+
+  #kana-page-hr {
+    width: 50%;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #katakana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+}

@@ -1,8 +1,0 @@
-@font-face {
-  font-family: Yu Mincho;
-  src: url("/src/assets/fonts/yumin.ttf");
-}
-button:hover {
-  background-color: #574c45;
-  cursor: pointer;
-}

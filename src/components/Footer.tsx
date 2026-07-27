@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import "./css/Footer.css";
+import "../css/footer.css";
 
 interface FooterProps {
   footerClassName: string;
