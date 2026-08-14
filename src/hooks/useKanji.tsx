@@ -4,7 +4,6 @@ import React, {
   useState,
   type ReactNode,
 } from "react";
-import { KANJI_LEVEL_URL } from "../utils/kanji";
 
 export type KanjiDetails = {
   id: number;
@@ -28,7 +27,6 @@ type KanjiContext = {
   setKanjiArray: React.Dispatch<React.SetStateAction<KanjiDetails[]>>;
   loading: boolean;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  jlptUrl: string[];
 };
 
 export const KanjiContext = createContext<KanjiContext | undefined>(undefined);
@@ -49,14 +47,12 @@ interface KanjiProviderProps {
 export function KanjiProvider({ children }: KanjiProviderProps) {
   const [kanjiArray, setKanjiArray] = useState<KanjiDetails[]>([]);
   const [loading, setLoading] = useState(true);
-  const jlptUrl = KANJI_LEVEL_URL;
 
   const kanjiCtx = {
     kanjiArray,
     setKanjiArray,
     loading,
     setLoading,
-    jlptUrl,
   };
 
   return (

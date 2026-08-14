@@ -1,11 +1,56 @@
 @font-face {
   font-family: Yu Mincho;
+  font-display: swap;
   src: url("/src/assets/fonts/yumin.ttf");
 }
+@media (width > 768px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+  .menu-burger-button {
+    display: none;
+  }
+}
 @media (width <= 768px) {
+  .sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background-color: #eee6d9;
+    height: 100vh;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+    border-radius: 0 5px 5px 0;
+    z-index: 1;
+  }
+  .sidebar-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background-color: #eee6d9;
+    width: 33%;
+    transition: transform 0.5s ease;
+    transform: translateX(0%);
+    border-radius: 0 5px 5px 0;
+    z-index: 1;
+  }
+  .menu-burger-button {
+    z-index: 1;
+  }
+  .menu-burger-button-active {
+    z-index: 1;
+  }
   .bar {
     width: 50%;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 2px;
   }
   .bar-1 {
@@ -36,41 +81,7 @@
 }
 @media (width > 425px) and (width <= 768px) {
   .menu-burger-button {
-    background-color: #27221F;
-    display: flex;
-    position: fixed;
-    top: 20px;
-    left: 25px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
-    transition: float 0.5s ease;
-    float: left;
-  }
-  .menu-burger-button-active {
-    background-color: #27221F;
-    display: flex;
-    position: fixed;
-    top: 20px;
-    left: 25px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
-    transition: float 0.5s ease;
-    float: right;
-  }
-}
-@media (width > 375px) and (width <= 425px) {
-  .menu-burger-button {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -86,7 +97,41 @@
     transform: translate(0%);
   }
   .menu-burger-button-active {
-    background-color: #27221F;
+    background-color: #27221f;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(600%);
+  }
+}
+@media (width > 375px) and (width <= 425px) {
+  .menu-burger-button {
+    background-color: #27221f;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -104,7 +149,7 @@
 }
 @media (width > 320px) and (width <= 375px) {
   .menu-burger-button {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -120,7 +165,7 @@
     transform: translate(0%);
   }
   .menu-burger-button-active {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -138,7 +183,7 @@
 }
 @media (width <= 320px) {
   .menu-burger-button {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -154,7 +199,7 @@
     transform: translate(0%);
   }
   .menu-burger-button-active {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     position: fixed;
     top: 20px;
@@ -170,21 +215,13 @@
     transform: translate(450%);
   }
 }
-@media (width > 768px) {
-  .sidebar-wrapper {
-    display: none;
-  }
-  .menu-burger-button {
-    display: none;
-  }
-}
 @media (width > 425px) and (width <= 768px) {
   .sidebar-wrapper {
     display: flex;
     flex-direction: column;
   }
   .sidebar-link {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -193,8 +230,9 @@
     height: 40px;
     padding: 35px 50px;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 26px;
+    text-decoration: none;
   }
   .sidebar {
     display: flex;
@@ -203,12 +241,12 @@
     align-items: center;
     justify-content: center;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     height: 100vh;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(-100%);
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     border-radius: 0 5px 5px 0;
   }
   .sidebar-active {
@@ -219,11 +257,11 @@
     position: fixed;
     height: 100vh;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(0%);
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     border-radius: 0 5px 5px 0;
   }
   .link-div {
@@ -244,7 +282,7 @@
   }
   .sidebar-footer-hr {
     width: 75px;
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     justify-self: center;
     margin-top: 50px;
   }
@@ -255,7 +293,7 @@
     flex-direction: column;
   }
   .sidebar-link {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -264,8 +302,9 @@
     height: 40px;
     padding: 10px 30px;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
+    text-decoration: none;
   }
   .sidebar {
     display: flex;
@@ -274,12 +313,12 @@
     align-items: center;
     justify-content: center;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     height: 100vh;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(-100%);
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     border-radius: 0 5px 5px 0;
   }
   .sidebar-active {
@@ -290,11 +329,11 @@
     position: fixed;
     height: 100vh;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(0%);
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     border-radius: 0 5px 5px 0;
   }
   .link-div {
@@ -315,7 +354,7 @@
   }
   .sidebar-footer-hr {
     width: 75px;
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     justify-self: center;
     margin-top: 50px;
   }
@@ -326,7 +365,7 @@
     flex-direction: column;
   }
   .sidebar-link {
-    background-color: #27221F;
+    background-color: #27221f;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -335,8 +374,9 @@
     height: 40px;
     padding: 10px 30px;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 15px;
+    text-decoration: none;
   }
   .sidebar {
     display: flex;
@@ -345,12 +385,11 @@
     align-items: center;
     justify-content: center;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     height: 100vh;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(-100%);
-    border: 1px solid #27221F;
     border-radius: 0 5px 5px 0;
   }
   .sidebar-active {
@@ -361,11 +400,10 @@
     position: fixed;
     height: 100vh;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     width: 33%;
     transition: transform 0.5s ease;
     transform: translateX(0%);
-    border: 1px solid #27221F;
     border-radius: 0 5px 5px 0;
   }
   .link-div {
@@ -386,8 +424,40 @@
   }
   .sidebar-footer-hr {
     width: 75px;
-    border: 1px solid #27221F;
+    border: 1px solid #27221f;
     justify-self: center;
     margin-top: 50px;
+  }
+  .menu-burger-button {
+    background-color: #27221f;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(0%);
+  }
+  .menu-burger-button-active {
+    background-color: #27221f;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+    transform: translate(475%);
   }
 }

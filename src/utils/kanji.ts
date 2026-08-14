@@ -2,8 +2,8 @@ export const KANJI_N5_LIST = [
   {
     id: 1,
     kanji: "日",
-    fr_meaning: ["le jour", "le soleil", "Japon", "compteur de jours"],
-    en_meaning: ["the day", "the sun", "Japan", "counter for days"],
+    fr_meanings: ["le jour", "le soleil", "Japon", "compteur de jours"],
+    en_meanings: ["the day", "the sun", "Japan", "counter for days"],
     readings: [
       {
         kun_yomi: ["ひ", "-び", "-か"],
@@ -15,8 +15,8 @@ export const KANJI_N5_LIST = [
   {
     id: 2,
     kanji: "一",
-    fr_meaning: ["un", "radical un"],
-    en_meaning: ["one", "one radical"],
+    fr_meanings: ["un", "radical un"],
+    en_meanings: ["one", "one radical"],
     readings: [
       {
         kun_yomi: ["ひと-", "ひと.つ"],
@@ -28,8 +28,8 @@ export const KANJI_N5_LIST = [
   {
     id: 3,
     kanji: "国",
-    fr_meaning: ["le pays"],
-    en_meaning: ["the country"],
+    fr_meanings: ["le pays"],
+    en_meanings: ["the country"],
     readings: [
       {
         kun_yomi: ["くに"],
@@ -41,8 +41,8 @@ export const KANJI_N5_LIST = [
   {
     id: 4,
     kanji: "人",
-    fr_meaning: ["la personne"],
-    en_meaning: ["the person"],
+    fr_meanings: ["la personne"],
+    en_meanings: ["the person"],
     readings: [
       {
         kun_yomi: ["ひと", "-り", "-と"],
@@ -54,8 +54,8 @@ export const KANJI_N5_LIST = [
   {
     id: 5,
     kanji: "年",
-    fr_meaning: ["l'année", "compteur d'années"],
-    en_meaning: ["the year", "counter for years"],
+    fr_meanings: ["l'année", "compteur d'années"],
+    en_meanings: ["the year", "counter for years"],
     readings: [
       {
         kun_yomi: ["とし"],
@@ -67,8 +67,8 @@ export const KANJI_N5_LIST = [
   {
     id: 6,
     kanji: "大",
-    fr_meaning: ["grand"],
-    en_meaning: ["large", "big"],
+    fr_meanings: ["grand"],
+    en_meanings: ["large", "big"],
     readings: [
       {
         kun_yomi: ["おお-", "おお.きい", "-おお.いに"],
@@ -80,8 +80,8 @@ export const KANJI_N5_LIST = [
   {
     id: 7,
     kanji: "十",
-    fr_meaning: ["dix"],
-    en_meaning: ["ten"],
+    fr_meanings: ["dix"],
+    en_meanings: ["ten"],
     readings: [
       {
         kun_yomi: ["とお", "と", "そ"],
@@ -93,8 +93,8 @@ export const KANJI_N5_LIST = [
   {
     id: 8,
     kanji: "二",
-    fr_meaning: ["deux", "radical deux"],
-    en_meaning: ["two", "two radical"],
+    fr_meanings: ["deux", "radical deux"],
+    en_meanings: ["two", "two radical"],
     readings: [
       {
         kun_yomi: ["ふた", "ふた.つ", "ふたたび"],
@@ -106,7 +106,7 @@ export const KANJI_N5_LIST = [
   {
     id: 9,
     kanji: "本",
-    fr_meaning: [
+    fr_meaningss: [
       "le livre",
       "le présent",
       "l'essentiel",
@@ -116,12 +116,12 @@ export const KANJI_N5_LIST = [
       "la vérité",
       "compteur d'objets allongés",
     ],
-    en_meaning: [
+    en_meaningss: [
       "the book",
       "the present",
       "the main",
       "the origin",
-      "the true",
+      "the truth",
       "the real",
       "counter for long cylindrical things",
     ],
@@ -136,7 +136,7 @@ export const KANJI_N5_LIST = [
   {
     id: 10,
     kanji: "本",
-    fr_meaning: [
+    fr_meanings: [
       "dans",
       "dedans",
       "à l'intérieur",
@@ -144,7 +144,7 @@ export const KANJI_N5_LIST = [
       "le centre",
       "la moyenne",
     ],
-    en_meaning: ["in", "inside", "the middle", "the mean", "the center"],
+    en_meanings: ["in", "inside", "the middle", "the mean", "the center"],
     readings: [
       {
         kun_yomi: ["なか", "うち", "あた.る"],
@@ -155,26 +155,35 @@ export const KANJI_N5_LIST = [
   },
 ];
 
-export const KANJI_LEVEL_PATH: string[] = [
-  "kanjiN5",
-  "kanjiN4",
-  "kanjiN3",
-  "kanjiN2",
-  "kanjiN1",
+export const KANJI_LEVELS = [
+  {
+    id: 1,
+    url: "jlpt-5",
+    title: "JLPT N5",
+  },
+  {
+    id: 2,
+    url: "jlpt-4",
+    title: "JLPT N4",
+  },
+  {
+    id: 3,
+    url: "jlpt-3",
+    title: "JLPT N3",
+  },
+  {
+    id: 4,
+    url: "jlpt-2",
+    title: "JLPT N2",
+  },
+  {
+    id: 5,
+    url: "jlpt-1",
+    title: "JLPT N1",
+  },
 ];
 
-export const KANJI_LEVEL_URL: string[] = [
-  "jlpt-5",
-  "jlpt-4",
-  "jlpt-3",
-  "jlpt-2",
-  "jlpt-1",
-];
-
-export const KANJI_LEVEL_TITLE: string[] = [
-  "JLPT N5",
-  "JLPT N4",
-  "JLPT N3",
-  "JLPT N2",
-  "JLPT N1",
+export const STROKE_COUNT = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+  23, 29,
 ];

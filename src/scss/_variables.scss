@@ -1,16 +1,17 @@
 // Colors
 
-$crimson_red: #CB1B45;
-$sumo_iro: #27221F;
+$crimson_red: #cb1b45;
+$sumo_iro: #27221f;
 $sumo_iro_light: #574c45;
-$japanese_white: #EEE6D9;
-$japanese_blue: #1C3563;
+$japanese_white: #eee6d9;
+$japanese_blue: #1c3563;
 
-$white: #FFFFFF;
+$white: #ffffff;
 
 // Fonts
 
 @font-face {
-    font-family: Yu Mincho;
-    src: url("/src/assets/fonts/yumin.ttf");
+  font-family: Yu Mincho;
+  font-display: swap;
+  src: url("/src/assets/fonts/yumin.ttf");
 }

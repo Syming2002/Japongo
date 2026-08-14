@@ -1,96 +1,112 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import KanjiCard from "../../components/KanjiCard";
 
 import "../../css/pages.css";
 import Sidebar from "../../components/Sidebar";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useKanji, type KanjiDetails } from "../../hooks/useKanji";
+import { KANJI_LEVELS } from "../../utils/kanji";
+import Filter from "../../components/Filter";
 
-interface KanjiListPageProps {
-  level: string;
-  levelTitle: string;
-}
+type KanjiLevelParams = {
+  kanjiLevel?: "jlpt-5" | "jlpt-4" | "jlpt-3" | "jlpt-2" | "jlpt-1";
+};
 
-function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
+function KanjiListPage() {
   const kanjiCtx = useKanji();
+  const { kanjiLevel } = useParams<KanjiLevelParams>();
 
-  console.log(kanjiCtx.kanjiArray);
+  const [search, setSearch] = useState("");
+  const [strokeCount, setStrokeCount] = useState(0);
+
+  const navigate = useNavigate();
+
+  const currentLevel = KANJI_LEVELS.find(({ url }) => kanjiLevel === url);
 
   useEffect(() => {
-    let cancelled = false;
     async function fetchKanji() {
       try {
         kanjiCtx.setLoading(true);
-        kanjiCtx.setKanjiArray([]);
 
-        const levelRes = await fetch(`https://kanjiapi.dev/v1/kanji/${level}`);
-        const kanjiArray: string[] = await levelRes.json();
+        const res = await fetch(
+          `https://kanjiapi.dev/v1/kanji/${currentLevel?.url}`,
+        );
 
-        const batchSize = 10;
-        const results: KanjiDetails[] = [];
+        const kanjiCharacters: string[] = await res.json();
 
-        for (let i = 0; i < kanjiArray.length; i += batchSize) {
-          const batch = kanjiArray.slice(i, i + batchSize);
-          const batchResults: KanjiDetails[] = await Promise.all(
-            batch.map(async (kanji) => {
-              const kanjiRes = await fetch(
-                `https://kanjiapi.dev/v1/kanji/${kanji}`,
-              );
-              return kanjiRes.json();
-            }),
-          );
-          results.push(...batchResults);
-        }
+        const results: KanjiDetails[] = await Promise.all(
+          kanjiCharacters.map(async (character) => {
+            const kanjiRes = await fetch(
+              `https://kanjiapi.dev/v1/kanji/${character}`,
+            );
 
-        if (!cancelled) {
-          kanjiCtx.setKanjiArray(results);
-        }
+            return kanjiRes.json();
+          }),
+        );
+
+        kanjiCtx.setKanjiArray(results);
       } catch (err) {
         console.error(err);
       } finally {
-        if (!cancelled) {
-          kanjiCtx.setLoading(false);
-        }
+        kanjiCtx.setLoading(false);
       }
     }
 
     fetchKanji();
 
     return () => {
-      cancelled = true;
+      kanjiCtx.setKanjiArray([]);
     };
-  }, [level]);
+  }, [currentLevel]);
 
-  const navigate = useNavigate();
-
-  function onKanjiCardClick(
-    linkJLPT: string | undefined,
-    linkCharacter: string,
-  ) {
-    navigate(`/jlpt-${linkJLPT}/${linkCharacter}`);
+  if (!currentLevel) {
+    return <p>Level not found</p>;
   }
 
+  const handleKanjiClick = useCallback(
+    (jlptLink: string, kanji: string) => {
+      navigate(`/${jlptLink}/${kanji}`);
+    },
+    [navigate],
+  );
+
+  const filterKanjiCharacter = useMemo(() => {
+    return kanjiCtx.kanjiArray.filter((kanji) => {
+      const macthesCharacter = kanji.kanji.includes(search);
+
+      const matchesStrokeCount =
+        strokeCount === 0 || kanji.stroke_count === strokeCount;
+
+      return macthesCharacter && matchesStrokeCount;
+    });
+  }, [search, strokeCount, kanjiCtx.kanjiArray]);
+
   return (
-    <>
+    <div>
       <Header />
       <Sidebar />
-      <h1 id="kanji-title">Kanji du {levelTitle}</h1>
+      <Filter
+        search={search}
+        setSearch={setSearch}
+        stroke_count={strokeCount}
+        setStrokeCount={setStrokeCount}
+      />
+      <h1 id="kanji-title">Kanji du {currentLevel.title}</h1>
       {kanjiCtx.loading && (
         <h2 style={{ textAlign: "center" }}>Chargement...</h2>
       )}
 
       <ul className="kanji-list">
-        {kanjiCtx.kanjiArray.map((kanji) => (
-          <li key={kanji.kanji} className="kanji-item">
-            <KanjiCard
-              kanji={kanji.kanji}
-              onKanjiCardClick={() =>
-                onKanjiCardClick(kanji.jlpt?.toString(), kanji.kanji)
-              }
-            />
-          </li>
+        {filterKanjiCharacter.map((kanji) => (
+          <KanjiCard
+            key={kanji.kanji}
+            kanji={kanji.kanji}
+            onKanjiCardClick={() =>
+              handleKanjiClick(currentLevel.url, kanji.kanji)
+            }
+          />
         ))}
       </ul>
 
@@ -99,7 +115,7 @@ function KanjiListPage({ level, levelTitle }: KanjiListPageProps) {
         footerClassName="main-footer"
         footerHrClassName="main-hr-footer"
       />
-    </>
+    </div>
   );
 }
 

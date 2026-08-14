@@ -1,10 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./css/index.css";
 import App from "./App.tsx";
-import { KanjiProvider } from "./hooks/useKanji.tsx";
 
-createRoot(document.getElementById("root")!).render(
-  <KanjiProvider>
-    <App />
-  </KanjiProvider>,
-);
+createRoot(document.getElementById("root")!).render(<App />);

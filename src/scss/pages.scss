@@ -27,10 +27,6 @@
   font-size: 42px;
 }
 
-.kanji-item {
-  list-style-type: none;
-}
-
 .kanji-details-page-div {
   height: 100%;
   display: flex;
@@ -202,6 +198,50 @@
 }
 
 @media (width > 768px) {
+  .filter-div {
+    display: flex;
+    text-decoration: none;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 60px #8a4d0f inset;
+    background-color: $japanese_white;
+    width: 250px;
+    margin-top: 25px;
+    padding: 25px;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .kanji-character-filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-label {
+    font-size: 1.6rem;
+  }
+
+  #search-filter {
+    text-align: center;
+  }
+
+  .stroke-count-filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #stroke-number-filter {
+    text-align: center;
+  }
+
   .main-footer {
     display: flex;
     flex-direction: column;
@@ -235,6 +275,50 @@
 }
 
 @media (width <= 768px) {
+  .filter-div {
+    display: flex;
+    text-decoration: none;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 60px #8a4d0f inset;
+    background-color: $japanese_white;
+    width: 250px;
+    margin-top: 25px;
+    padding: 25px;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .kanji-character-filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-label {
+    font-size: 1.6rem;
+  }
+
+  #search-filter {
+    text-align: center;
+  }
+
+  .stroke-count-filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #stroke-number-filter {
+    text-align: center;
+  }
+
   .kanji-list {
     display: flex;
     padding: 15px;
@@ -256,6 +340,12 @@
 
   #grammar-main-page-div {
     height: 100%;
+  }
+
+  .grammar-main-page-tooltip {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
   }
 
   .grammar-selection-list-div {
@@ -301,7 +391,7 @@
   }
 }
 
-@media (width <= 425px) {
+@media (width > 375px) and (width <= 425px) {
   #hiragana-title {
     text-align: center;
     padding: 25px;
@@ -328,5 +418,62 @@
     text-align: center;
     padding: 25px;
     font-size: 42px;
+  }
+
+  #kanji-category-list-main-title {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  #kanji-jlpt-category-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (width <= 375px) {
+  #hiragana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  .kana-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+  }
+
+  #kana-page-hr {
+    width: 50%;
+    border: 1px solid $sumo_iro;
+    justify-self: center;
+    margin-top: 50px;
+  }
+
+  #katakana-title {
+    text-align: center;
+    padding: 25px;
+    font-size: 42px;
+  }
+
+  #kanji-category-list-main-title {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  #kanji-jlpt-category-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-bottom: 25px;
   }
 }

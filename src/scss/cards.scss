@@ -23,11 +23,11 @@
 
 .kanji-category-link {
   text-decoration: none;
+  border-radius: 10%;
   box-shadow:
     2px 3px 20px black,
-    0 0 60px #8a4d0f inset;
+    0 0 30px #8a4d0f inset;
   background-color: $japanese_white;
-  border: 2px solid $sumo_iro;
 }
 
 .kanji-category-link:hover {
@@ -55,6 +55,26 @@
   color: $sumo_iro;
 }
 
+.kanji-item {
+  list-style-type: none;
+}
+
+.kanji-item-visible {
+  opacity: 1;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+  transform: translateY(0);
+}
+
+.kanji-item-hidden {
+  opacity: 0;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+  transform: translateY(20px);
+}
+
 .kanji-card {
   box-shadow:
     2px 3px 20px black,
@@ -77,11 +97,11 @@
 .grammar-selection-card-div {
   width: 100px;
   height: 150px;
+  border-radius: 10%;
   box-shadow:
     2px 3px 20px black,
-    0 0 60px #8a4d0f inset;
+    0 0 30px #8a4d0f inset;
   background-color: $japanese_white;
-  border: 2px solid $sumo_iro;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -251,6 +271,9 @@
   .kana-card-table {
     font-size: 75px;
     display: flex;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 30px #8a4d0f inset;
     flex-direction: column;
     justify-content: center;
     width: 100px;
@@ -301,6 +324,10 @@
   }
 
   .grammar-selection-card-div {
+    box-shadow:
+      2px 3px 20px black,
+      0 0 30px #8a4d0f inset;
+
     p {
       font-size: 2rem;
     }
@@ -379,12 +406,16 @@
   .kanji-card {
     font-size: 16px;
     border-radius: 10px;
+    box-shadow:
+      2px 3px 20px black,
+      0 0 30px #8a4d0f inset;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
     padding: 12px;
+    font-size: 2.5rem;
 
     width: 60px;
     height: 125px;

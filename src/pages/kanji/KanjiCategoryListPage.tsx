@@ -4,6 +4,7 @@ import KanjiCategory from "../../components/KanjiCategory";
 import Sidebar from "../../components/Sidebar";
 
 import "../../css/pages.css";
+import { KANJI_LEVELS } from "../../utils/kanji";
 
 function KanjiCategoryListPage() {
   return (
@@ -12,11 +13,13 @@ function KanjiCategoryListPage() {
       <Sidebar />
       <h1 id="kanji-category-list-main-title">Liste des Kanji par JLPT</h1>
       <div id="kanji-jlpt-category-list-div">
-        <KanjiCategory level="JLPT N5" path="jlpt-5" />
-        <KanjiCategory level="JLPT N4" path="jlpt-4" />
-        <KanjiCategory level="JLPT N3" path="jlpt-3" />
-        <KanjiCategory level="JLPT N2" path="jlpt-2" />
-        <KanjiCategory level="JLPT N1" path="jlpt-1" />
+        {KANJI_LEVELS.map((level) => (
+          <KanjiCategory
+            key={level.title}
+            level={level.title}
+            path={level.url}
+          />
+        ))}
       </div>
       <Footer
         version={0.1}

@@ -1,5 +1,6 @@
 @font-face {
   font-family: Yu Mincho;
+  font-display: swap;
   src: url("/src/assets/fonts/yumin.ttf");
 }
 .kana-table-row {
@@ -12,28 +13,28 @@
 .kana-card-table {
   border-radius: 10px;
   box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-  background-color: #EEE6D9;
+  background-color: #eee6d9;
   border-radius: 10px;
   text-align: center;
 }
 
 #kana-romaji-hr {
-  border: 1px solid #27221F;
+  border: 1px solid #27221f;
 }
 
 .kanji-category-link {
   text-decoration: none;
-  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-  background-color: #EEE6D9;
-  border: 2px solid #27221F;
+  border-radius: 10%;
+  box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
+  background-color: #eee6d9;
 }
 
 .kanji-category-link:hover {
   transition: background-color 0.2s ease-in-out;
-  background-color: #27221F;
+  background-color: #27221f;
 }
 .kanji-category-link:hover p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .kanji-category-div {
@@ -50,12 +51,28 @@
   justify-self: center;
   align-self: center;
   text-align: center;
-  color: #27221F;
+  color: #27221f;
+}
+
+.kanji-item {
+  list-style-type: none;
+}
+
+.kanji-item-visible {
+  opacity: 1;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(0);
+}
+
+.kanji-item-hidden {
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  transform: translateY(20px);
 }
 
 .kanji-card {
   box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-  background-color: #EEE6D9;
+  background-color: #eee6d9;
   border: none;
   transition: transform 0.5s ease;
   transform: translateY(0%);
@@ -63,9 +80,9 @@
 
 .kanji-card:hover {
   transition: background-color 0.2s ease-in-out;
-  background-color: #27221F;
+  background-color: #27221f;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: transform 0.5s ease;
   transform: translateY(-5%);
 }
@@ -73,9 +90,9 @@
 .grammar-selection-card-div {
   width: 100px;
   height: 150px;
-  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-  background-color: #EEE6D9;
-  border: 2px solid #27221F;
+  border-radius: 10%;
+  box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
+  background-color: #eee6d9;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -83,10 +100,10 @@
 
 .grammar-selection-card-div:hover {
   transition: background-color 0.2s ease-in-out;
-  background-color: #27221F;
+  background-color: #27221f;
 }
 .grammar-selection-card-div:hover p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .grammar-selection-card-div:hover {
   cursor: pointer;
@@ -98,7 +115,7 @@
   justify-self: center;
   align-self: center;
   text-align: center;
-  color: #27221F;
+  color: #27221f;
 }
 
 @media (width > 1440px) {
@@ -214,6 +231,7 @@
   .kana-card-table {
     font-size: 75px;
     display: flex;
+    box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
     flex-direction: column;
     justify-content: center;
     width: 100px;
@@ -253,6 +271,9 @@
     gap: 25px;
     width: 100px;
     height: 185px;
+  }
+  .grammar-selection-card-div {
+    box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
   }
   .grammar-selection-card-div p {
     font-size: 2rem;
@@ -315,12 +336,14 @@
   .kanji-card {
     font-size: 16px;
     border-radius: 10px;
+    box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
     padding: 12px;
+    font-size: 2.5rem;
     width: 60px;
     height: 125px;
   }
@@ -338,7 +361,7 @@
     flex-direction: column;
     justify-content: center;
     box-shadow: 2px 3px 20px black, 0 0 30px #8a4d0f inset;
-    background-color: #EEE6D9;
+    background-color: #eee6d9;
     width: 50px;
     height: 110px;
     padding: 10px;

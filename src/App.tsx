@@ -1,6 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
-import { KanaProvider } from "./hooks/useKana";
 import KanaPage from "./pages/KanaPage";
 import KanjiCategoryListPage from "./pages/kanji/KanjiCategoryListPage";
 import KanjiListPage from "./pages/kanji/KanjiListPage";
@@ -10,49 +9,35 @@ import GrammarParticulePage from "./pages/grammar/GrammarParticlePage";
 import KanjiDetailsPage from "./pages/kanji/KanjiDetailsPage";
 import VerbsMainPage from "./pages/verbs/VerbsMainPage";
 import VocabularyMainPage from "./pages/vocabulary/VocabularyMainPage";
+import { KanjiProvider } from "./hooks/useKanji";
+import { KanaProvider } from "./hooks/useKana";
 
 function App() {
   return (
     <HashRouter>
       <KanaProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/kana" element={<KanaPage />} />
-          <Route path="/kanji" element={<KanjiCategoryListPage />} />
-          <Route
-            path="/jlpt-5"
-            element={<KanjiListPage level="jlpt-5" levelTitle="JLPT N5" />}
-          />
-          <Route
-            path="/jlpt-4"
-            element={<KanjiListPage level="jlpt-4" levelTitle="JLPT N4" />}
-          />
-          <Route
-            path="/jlpt-3"
-            element={<KanjiListPage level="jlpt-3" levelTitle="JLPT N3" />}
-          />
-          <Route
-            path="/jlpt-2"
-            element={<KanjiListPage level="jlpt-2" levelTitle="JLPT N2" />}
-          />
-          <Route
-            path="/jlpt-1"
-            element={<KanjiListPage level="jlpt-1" levelTitle="JLPT N1" />}
-          />
-          <Route path="/grammar" element={<GrammarMainPage />} />
-          {HIRAGANA_PARTICULE.map((hiragana) => (
+        <KanjiProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/kana" element={<KanaPage />} />
+            <Route path="/kanji" element={<KanjiCategoryListPage />} />
+
+            <Route path={"/:kanjiLevel"} element={<KanjiListPage />} />
+            <Route path="/grammar" element={<GrammarMainPage />} />
+            {HIRAGANA_PARTICULE.map((hiragana) => (
+              <Route
+                path={`/particle/${hiragana}`}
+                element={<GrammarParticulePage hiraganaParticle={hiragana} />}
+              />
+            ))}
             <Route
-              path={`/particle/${hiragana}`}
-              element={<GrammarParticulePage hiraganaParticle={hiragana} />}
+              path={"/:kanjiLevel/:kanjiCharacter"}
+              element={<KanjiDetailsPage />}
             />
-          ))}
-          <Route
-            path={"/:kanjiJLPT/:kanjiCharacter"}
-            element={<KanjiDetailsPage />}
-          />
-          <Route path={"/verbs"} element={<VerbsMainPage />} />
-          <Route path={"/vocabulary"} element={<VocabularyMainPage />} />
-        </Routes>
+            <Route path={"/verbs"} element={<VerbsMainPage />} />
+            <Route path={"/vocabulary"} element={<VocabularyMainPage />} />
+          </Routes>
+        </KanjiProvider>
       </KanaProvider>
     </HashRouter>
   );

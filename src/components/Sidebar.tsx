@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Logo from "./Logo";
 import MenuBurger from "./MenuBurger";
 import LinkPage from "./LinkPage";
+import { mainButtons } from "../utils/nav";
 
 function Sidebar() {
   const [toggle, setToggle] = useState(false);
@@ -12,8 +13,6 @@ function Sidebar() {
   function handleMenuBurgerClick() {
     setToggle((prevToggle) => !prevToggle);
   }
-
-  const mainButtons = ["Kana", "Kanji", "Grammar", "Verbs", "Vocabulary"];
 
   return (
     <div className="sidebar-wrapper">
@@ -23,7 +22,7 @@ function Sidebar() {
             <LinkPage
               title={button}
               className="sidebar-link"
-              link={`${button.at(0)?.toLowerCase() + button.substring(1).toLowerCase()}`}
+              link={`/${button.at(0)?.toLowerCase() + button.substring(1).toLowerCase()}`}
               key={button}
             />
           ))}

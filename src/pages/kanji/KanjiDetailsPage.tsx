@@ -29,7 +29,7 @@ function KanjiDetailsPage() {
     }
 
     fetchKanjiDetails();
-  }, [kanji]);
+  }, []);
 
   function kanjiDetection(kanjiFinded: KanjiDetails | undefined) {
     return !kanjiFinded ? (

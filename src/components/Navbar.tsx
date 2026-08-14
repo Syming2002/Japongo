@@ -1,9 +1,8 @@
 import "../css/header.css";
+import { mainButtons } from "../utils/nav";
 import LinkPage from "./LinkPage";
 
 function Navbar() {
-  const mainButtons = ["Kana", "Kanji", "Grammar", "Verbs", "Vocabulary"];
-
   return (
     <nav>
       {mainButtons.map((button) => (
