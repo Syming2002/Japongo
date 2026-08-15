@@ -1,6 +1,5 @@
 import type React from "react";
 import "../css/pages.css";
-import type { KanjiDetails } from "../hooks/useKanji";
 
 interface FilterProps {
   search: string;
